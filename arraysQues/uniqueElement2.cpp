@@ -26,3 +26,11 @@ int main() {
         cout << x << " ";
 }
 // ans = 1,3,5
+
+/*
+| Version                 | Loop on?               | Kyu use kiya?                                                               | Output order                 |
+| ----------------------- | ---------------------- | --------------------------------------------------------------------------- | ---------------------------- |
+| **1st (unordered_set)** | `for (auto &p : freq)` | Map ke **unique keys** par loop, fast, direct                               | Order **random** (unordered) |
+| **2nd (vector result)** | `for (int num : arr)`  | Jo elements original array me jis order me the, usi order me unique nikalna | Order **same as input**      |
+
+*/

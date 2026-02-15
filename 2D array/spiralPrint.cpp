@@ -59,7 +59,18 @@ int main()
 {
     
     vector<vector <int>> number = {{1,2,3} , {4,5,6} , {7,8,9}};
-    
+    int r = number.size();
+    int c = number[0].size();
+
+    for(int i=0 ; i<r ; i++)
+    {
+        for(int j=0 ; j<c ; j++)
+        {
+            cout << number[i][j] << " ";
+        }
+        cout << endl;
+    }
+
     /*
     int r,c;
     cout << "\nenter the row and column ";
@@ -76,7 +87,13 @@ int main()
         }
     }
     */
-    spiralOrder(number);
+    vector<int> ans =  spiralOrder(number);
+    for(auto i:ans)
+    {
+        cout << i << " ";
+    }
+
+    
             
     return 0;
 }

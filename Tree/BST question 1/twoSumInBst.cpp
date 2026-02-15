@@ -1,6 +1,9 @@
 #include <bits/stdc++.h> 
+#include<iostream>
+#include<queue>
+using namespace std;
 // Following is the Binary Tree node structure
-/**************
+
 class BinaryTreeNode {
     public : 
     T data;
@@ -14,7 +17,6 @@ class BinaryTreeNode {
     }
     
 };
-***************/
 
 void inOrder(BinaryTreeNode<int>* root, vector<int> &in)
 {

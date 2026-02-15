@@ -1,7 +1,7 @@
 #include <bits/stdc++.h> 
-/************************************************************
+#include <vector>
 
-    Following is the Binary Tree node structure
+    //Following is the Binary Tree node structure
     
     template <typename T>
     class TreeNode {
@@ -24,7 +24,6 @@
         }
     };
 
-************************************************************/
 void inOrder(TreeNode<int>* root, vector<int> &in)
 {
     // base case

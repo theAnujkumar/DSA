@@ -43,5 +43,26 @@ bool searchMatrix(vector<vector<int>> &matrix , int target)
 
 int main()
 {
+    vector<vector <int>> number = {{1,2,3} , {4,5,6} , {7,8,9}};
+    int target = 5;
 
+    for(auto b: number)
+    {
+        for(auto c:b)
+        {
+            cout << c << " ";
+        }
+        cout << endl;
+    }
+
+    bool result = searchMatrix(number,target);
+    if(result)
+    {
+        cout << "present " << endl;
+    }
+    else{
+        cout << "not present " << endl;
+    }
+            
+    return 0;
 }

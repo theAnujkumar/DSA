@@ -120,7 +120,34 @@ Node * removeDuplicates(Node *head)
 */
 
 //              from unsorted linked list
-Node *removeDup(Node * &head)
+// Node *removeDup(Node * &head)
+// {
+//     if(head == NULL)
+//     {
+//         return NULL;
+//     }
+
+//     Node* curr = head;
+//     while(curr != NULL)
+//     {
+//         Node *temp = curr->next;
+//         while(temp != NULL)
+//         {
+//             if(curr->data == temp->data)
+//             {
+//                 //temp = temp->next->next;
+//                 curr = temp->next;
+//             }
+//             else{
+//                 temp = temp->next;
+//             }
+//         }
+//     curr = curr->next;
+//     }
+//     return head;
+// }
+
+Node *removeDup(Node* head)
 {
     if(head == NULL)
     {
@@ -130,23 +157,50 @@ Node *removeDup(Node * &head)
     Node* curr = head;
     while(curr != NULL)
     {
-        Node *temp = curr->next;
-        while(temp != NULL)
+        Node *temp = curr;
+        // not use temp = curr->next
+        while(temp && temp->next)
         {
-            if(curr->data == temp->data)
+            if(temp->data == temp->next->data)
             {
-                temp = temp->next->next;
+                //temp = temp->next->next;
+                temp->next = temp->next->next;
+                //delete(temp->next);
             }
             else{
                 temp = temp->next;
             }
         }
-        
+    curr = curr->next;
     }
-
     return head;
 }
 
+
+Node* removeDupFromUnsorted(Node* head)
+{
+    Node* curr = head;
+    while(curr != NULL)
+    {
+
+        Node* prev = curr;
+        Node* temp = curr->next;
+        while(temp != NULL)
+        {
+            if(curr->data == temp->data)
+            {
+                prev->next = temp->next;
+                temp->next = NULL;
+            }
+            else{
+                prev = temp;
+                temp = temp->next;
+            }
+        }
+        curr = curr->next;
+    }
+    return head;
+}
 
 Node *removeDuplicates(Node *head)
 {
@@ -174,6 +228,7 @@ Node *removeDuplicates(Node *head)
             prev -> next = curr -> next;
             delete curr;
         }
+        //curr = curr->next;   not because it will skip the some element
         curr = prev -> next;
     }
     return head;
@@ -188,7 +243,10 @@ int main()
     Node *tail = node1;
     //print(head);
 
-    //insertAtHead(head , 12);
+    // for sorted
+    //insertAtTail(tail,22);
+
+    // for unsorted
     insertAtTail(tail,12);
     //print(head);
 
@@ -199,11 +257,13 @@ int main()
     //print(head);
 
     //tail->next = head->next;
+    print(head);
 
     cout << "head is " << head->data << endl;
     cout << "tail is " << tail->data << endl;
 
-    
+    removeDuplicates(head);
+
     print(head);
 
     return 0;

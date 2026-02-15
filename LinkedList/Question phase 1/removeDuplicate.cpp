@@ -77,7 +77,7 @@ void insertAtPosition(Node* &head ,Node* &tail , int position , int d)
 }
 
 // from sorted list
-Node * removeDuplicates(Node *head)
+Node* removeDuplicates(Node* &head)
 {
     // empty list
     if(head == NULL)
@@ -137,6 +137,7 @@ int main()
 
     //insertAtHead(head , 12);
     insertAtTail(tail,12);
+    insertAtTail(tail,22);
     //print(head);
 
     insertAtTail(tail,15);
@@ -145,12 +146,16 @@ int main()
     insertAtPosition(head,tail,3,22);
     //print(head);
 
-    tail->next = head->next;
+    // tail->next = head->next;
 
     cout << "head is " << head->data << endl;
     cout << "tail is " << tail->data << endl;
 
     
+    print(head);
+
+    removeDuplicates(head);
+    cout << "after removing " << endl;
     print(head);
 
     return 0;

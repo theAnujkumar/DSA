@@ -37,7 +37,7 @@ int printSum(int arr[][3] , int r,int c)
 int largestRowSum(int arr[][3],int r,int c)
 {
     int rowIndex = -1;
-    int maxi = INT_MIN;
+    int maxi = INT8_MIN;
 
     for(int r=0 ; r<3 ; r++)
     {
@@ -58,9 +58,9 @@ int largestRowSum(int arr[][3],int r,int c)
 }
 int main()
 {
-    //int arr[3][3] = {1,2,3,4,5,6,7,8,9};
+    int arr[3][3] = {1,2,3,4,5,6,7,8,9};
     //int arr[2][3] = {{1,11,111} , {2,22,222}};
-    int arr[3][3];
+    //int arr[3][3];
 
 
     cout << "enter the values= ";

@@ -31,5 +31,11 @@ int main() {
     }
     cout << endl;
 
+    int first[4] = {1,2};
+    cout << "size is " << sizeof(first); // 4*4
+
+    int second[3] = {1}; 
+    cout << "size is " << sizeof(second);  // 3*4
+
     return 0;
 }

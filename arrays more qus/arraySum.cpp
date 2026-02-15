@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std;
 
-vector <int> reverse(vector<int> v)
+vector <int> reverse(vector<int> &v)
 {
     int s = 0;
     int e = v.size()-1;
@@ -12,11 +12,13 @@ vector <int> reverse(vector<int> v)
         swap(v[s++],v[e--]);
     }
 
-    return v;
-
-    for(int f:v) {
+    // final result
+    cout << "result" << endl;
+    
+    for(auto f:v) {
         cout << f << " ";
     }
+    return v;
 }
 
 vector<int> findArraySum(vector<int> &a , int n ,vector<int> &b ,int m)
@@ -67,6 +69,10 @@ vector<int> findArraySum(vector<int> &a , int n ,vector<int> &b ,int m)
         ans.push_back(sum);
     }
 
+    for(auto i:ans)
+    {
+        cout << i << " ";
+    }
     return reverse(ans);
 
 }
@@ -76,8 +82,8 @@ int main()
     vector<int> b;
 
     a.push_back(1);
-    a.push_back(2);
     a.push_back(3);
+    a.push_back(2);
     
     b.push_back(9);
     b.push_back(9);

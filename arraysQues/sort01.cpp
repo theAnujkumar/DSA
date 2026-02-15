@@ -15,37 +15,37 @@ int sort(int arr[] , int n)
     int left = 0;
     int right = n-1;
 
-    //int step = 0;
+    int step = 0;
+
+    // while(left < right)
+    // {
+    //     //cout << "step" << step++ <<endl ;
+    //     //printArray(arr,n);
+    //     //cout << endl;
+
+    //     while(arr[left] == 0 && left < right)
+    //     {
+    //         left++ ;
+    //     }
+    //     while(arr[right] == 1 && left < right)
+    //     {
+    //         right-- ;
+    //     }
+        
+    //     if(arr[left]==1 && arr[right]==0 && left<right)
+    //     {
+    //         swap(arr[left] , arr[right]);
+    //         left++ ;
+    //         right-- ;
+    //     }
+        
+    // }
 
     while(left < right)
     {
-        //cout << "step" << step++ <<endl ;
-        //printArray(arr,n);
-        //cout << endl;
-
-        while(arr[left] == 0 && left < right)
-        {
-            left++ ;
-        }
-        while(arr[right] == 1 && left < right)
-        {
-            right-- ;
-        }
-        
-        if(arr[left]==1 && arr[right]==0 && left<right)
-        {
-            swap(arr[left] , arr[right]);
-            left++ ;
-            right-- ;
-        }
-        
-    }
-
-    while(left < right)
-    {
-        //cout << "step" << step++ <<endl ;
-        //printArray(arr,n);
-        //cout << endl;
+        cout << "step" << step++ <<endl ;
+        printArray(arr,n);
+        cout << endl;
 
         if(arr[left] == 0)
         {
@@ -101,5 +101,5 @@ main()
 
     //cout << "printing after function call";
 
-    printArray(arr ,8);
+    //printArray(arr ,8);
 }

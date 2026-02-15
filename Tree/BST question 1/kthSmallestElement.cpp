@@ -49,6 +49,8 @@ int kthSmallest(BinaryTreeNode<int>* root, int k) {
     return ans;
 }
 
+
+// 2nd
 void solved(BinaryTreeNode<int>* root,int &k , int &ans)
 {
     if(root == NULL)

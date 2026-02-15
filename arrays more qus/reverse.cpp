@@ -18,6 +18,26 @@ vector<int> reverse(vector<int> &v)
     return v;
 }
 
+void reverseVector(vector<int> &v)
+{
+    int s = 0;
+    int e = v.size()-1;
+
+    while(s<=e)
+    {
+        swap(v[s],v[e]);
+        s++;
+        e--;
+    }
+
+    for(int i=0 ; i<v.size() ; i++)
+    // int m = 2;
+    //for(int i=m+1 ; i<v.size() ; i++)
+    {
+        cout << v[i] << " ";
+    }
+}
+
 void print(vector<int> v)
 {
     for(int i=0 ; i<v.size() ; i++)
@@ -48,6 +68,10 @@ int main()
 
     cout << "\nprint reverse array\n";
     print(ans);
+
+
+    cout << "\nprint after again reverse array it will become original array\n";
+    reverseVector(v);
 
     return 0;
 }

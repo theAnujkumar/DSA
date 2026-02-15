@@ -6,8 +6,10 @@ int selectionSort(int arr[] , int n)
 {
     for(int i=0 ; i<(n-1) ; i++)
     {
+        // firstly assume 0th index is contain minimum element
         int minIndex = i;
 
+        // start from 1st index until n-1
         for(int j=i+1 ; j<n ; j++)
         {
             //if(arr[minIndex] > arr[j])

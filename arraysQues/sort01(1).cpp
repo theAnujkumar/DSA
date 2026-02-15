@@ -21,15 +21,17 @@ int main()
     for(int i=0 ; i<count0 ; i++)
     {
         arr[i] = 0;
+        cout << " " << arr[i];
     }
     for(int i=0 ; i<count1 ; i++)
     {
         arr[i] = 1;
+        cout << " " << arr[i];
     }
 
-    for(int i=0 ; i<n ; i++)
-    {
-        cout << arr[i] << endl;
-    }
+    // for(int i=0 ; i<n ; i++)
+    // {
+    //     cout << arr[i] << endl;
+    // }
     return 0;
 }

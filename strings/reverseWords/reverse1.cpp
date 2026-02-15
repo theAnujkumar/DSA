@@ -3,16 +3,16 @@
 #include<vector>
 using namespace std;
 
-// void reverse(char begin,char end)
-// {
-//     int s=begin;
-//     int e=end-1;
+void reverse(char begin,char end)
+{
+    int s=begin;
+    int e=end-1;
 
-//     while(s<e)
-//     {
-//         swap(begin,end);
-//     }
-// }
+    while(s<e)
+    {
+        swap(begin,end);
+    }
+}
 
  string reverseWords(string s)
 {
@@ -30,7 +30,7 @@ using namespace std;
         }
     }
     // last word
-    reverse(word.begin(), word.end());
-    result += word;
+    reverse(words.begin(), words.end());
+    result += words;
     return result;
 }

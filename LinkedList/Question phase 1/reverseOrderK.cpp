@@ -1,6 +1,33 @@
 // Tc = O(k*n) = O(n)
 // Sc = O(k/n) = O(n)
 
+#include<iostream>
+using namespace std;
+
+class Node
+{
+public:
+    int data;
+    Node *next;
+    Node()
+    {
+        this->data = 0;
+        next = NULL;
+    }
+    Node(int data)
+    {
+        this->data = data; 
+        this->next = NULL;
+    }
+    Node(int data, Node* next)
+    {
+        this->data = data;
+        this->next = next;
+    }
+};
+
+
+
 Node* kReverse(Node* head, int k) {
     // Write your code here.
 

@@ -28,6 +28,7 @@ char getMaxOccurChar(string s)
     int maxi = -1 , ans = 0;
     for(int i=0 ; i<26 ; i++)
     {
+        // arr[i] takes count no. of times occur this character
         if(maxi<arr[i])
         {
             ans = i;
@@ -74,3 +75,5 @@ int main()
 // n = string ke length
 // tc = O(n)+O(1) = O(n)
 // sc = O(n)
+
+// 2nd loop saree string tak nhi chalta sirf 26,freq tak chalta hai

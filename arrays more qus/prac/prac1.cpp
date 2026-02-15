@@ -26,3 +26,35 @@ int main() {
         cout << x << " ";
 }
 // ans = 1,3,5
+
+/*
+    void print(int arr[],int n)
+    {
+        for(int i=0 ; i<n ; i++)
+        {
+            cout << arr[i] << " ";
+        }
+    }
+
+    void print(vector<int> arr2,int n)
+    {
+        for(int i=0 ; i<n ; i++)
+        {
+            cout << arr2[i] << " ";
+        }
+    }
+
+int main()
+{
+    int arr[6] = {0,1,5,0,3,0};
+    vector<int> arr2 = {1,2,2,3,4,4,5};
+
+    print(arr,6);
+    print2(arr2,7);
+
+    for(int x:arr2)
+    {
+        cout << x << " ";
+    }
+}
+*/

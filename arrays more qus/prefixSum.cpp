@@ -9,6 +9,8 @@ vector<int> prefixSum (vector<int> &arr)
 {
     int size = arr.size();
     vector<int> prefix(size);
+
+    // remember 0 index
     prefix[0] = arr[0];
 
     for(int i=1 ; i<size ; i++)

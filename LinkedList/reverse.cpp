@@ -12,7 +12,7 @@ Node* reverse(Node* &head, Node* &curr, Node* &prev)
     }
     Node* forward = curr->next;
     reverse(head,forward,curr);
-    curr->next = prev
+    curr->next = prev;
 }
 
 // Each recursive call goes one level deeper into the call stack until curr == NULL.

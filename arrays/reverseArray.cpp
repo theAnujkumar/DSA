@@ -15,8 +15,9 @@ int reverse(int arr[] , int n) {
 }
 int printArray(int arr[] , int n) {
     for(int i=0 ; i<n ; i++) {
-        cout << "\nthe value is " << arr[i];
+        cout << " " << arr[i];
     }
+    cout << endl;
 }
 int main() {
     

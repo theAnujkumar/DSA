@@ -56,7 +56,11 @@ main()
     vector<int> number1 = {1,2,2,3,4,5};
     vector<int> number2 = {2,2,3,6};
 
-    findArrayIntersection(number1,6,number2,4);
+    vector<int> ans = findArrayIntersection(number1,6,number2,4);
+    for(auto &a : ans)
+    {
+        cout << a << " ";
+    }
 
     /*
     for(int i=0 ; i<=5 ; i++)

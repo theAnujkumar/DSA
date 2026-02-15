@@ -4,7 +4,7 @@ using namespace std;
 
 int getMax(int num[] , int n)
 {
-    int maxi = INT_MIN;
+    int maxi = INT8_MIN;
 
     for(int i=0 ; i<n ; i++)
     {
@@ -19,7 +19,7 @@ int getMax(int num[] , int n)
 
 int getMin(int num[] , int n)
 {
-    int mini = INT_MAX;
+    int mini = INT8_MAX;
 
     for(int i=0 ; i<n ; i++)
     {
@@ -46,4 +46,5 @@ int main() {
 
     cout <<"\n max-value is " << getMax(num,size);
     cout <<"\n min-value is " << getMin(num,size);
+
 }

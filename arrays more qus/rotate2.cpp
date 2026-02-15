@@ -11,7 +11,7 @@ void reverse(vector<int> &arr,int k,int start,int end)
 }
 
 // for right rotation
-void rotate(vector<int> &arr,int k)
+void rotateRight(vector<int> &arr,int k)
 {
     int n = arr.size();
     k = k%n;
@@ -21,6 +21,7 @@ void rotate(vector<int> &arr,int k)
     reverse(arr,k,k,n-1);
 }
 
+// left rotation 
 void rotate(vector<int> &arr,int k)
 {
     int n = arr.size();
@@ -33,5 +34,20 @@ void rotate(vector<int> &arr,int k)
 
 int main()
 {
+    vector<int> arr = {1, 2, 3, 4, 5};
+    int k = 2;
 
+    for(auto a : arr)
+    {
+        cout << " " << a ;
+    }
+    cout << endl ;
+    
+    rotate(arr,k);
+
+    for(auto a : arr)
+    {
+        cout << " " << a ;
+    }
+    cout << endl ;
 }

@@ -16,7 +16,7 @@ main() {
     
     int first[13] = {2,4,5};
 
-    printArray(first , 4);
+    printArray(first , 3);
 
     //declare
     int number[15];

@@ -8,6 +8,7 @@ int main()
     int c=6;
 
     cout << "size is, " << sizeof(string) << "!\n";
+    // size of object not actual characters
     cout << "size is, " << sizeof(name) << "!\n";
     cout << "size is, " << sizeof(int) << "!\n";
     cout << "size is, " << sizeof(c) << "!\n";
@@ -24,7 +25,7 @@ int main()
     getline(cin,arr1);
     cout << "string is " << arr1;
 
-
+    
 
     // cout << "enter your name" << endl;
     // getline(cin,name);
