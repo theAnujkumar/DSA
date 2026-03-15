@@ -20,6 +20,10 @@ int main() {
 
     cout << "string is" << ans;
     
+
+    // tc = O(n)
+    // sc = O(1)
+
     // for(char ch:s)
     // {
     //     freq[ch]++;

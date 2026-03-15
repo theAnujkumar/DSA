@@ -7,12 +7,10 @@ using namespace std;
 class graph{
     public:
         unordered_map<int,list<int>> adj;
-
         void addEdge(int u,int v,bool direction)
         {
             // direction 0 -> undirected
             // direction 1 -> directed
-
             adj[u].push_back(v);
             if(!direction)
             {
@@ -54,3 +52,11 @@ int main()
 
     return 0 ;
 }
+/*
+0 1
+0 4
+1 3 
+1 2
+2 3
+3 4
+*/

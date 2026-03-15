@@ -5,9 +5,9 @@ using namespace std;
 template <typename T>
 #include<list>
 
-class graphNew{
+class graph{
     public:
-        unordered_map<T, list<T> > adj;
+        unordered_map<T, list<T>> adj;
 
         void addEdge(T u,T v,bool direction)
         {
@@ -37,7 +37,7 @@ class graphNew{
 
 int main()
 {
-    graphNew<int> g;
+    graph<int> g;
     int edges = 6;
     int nodes = 5;
 

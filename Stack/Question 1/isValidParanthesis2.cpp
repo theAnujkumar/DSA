@@ -45,3 +45,18 @@ bool isValidParenthesis(string s)
     return false;       // koi invalid char bacha hai like ( , {
 
 }
+
+int main()
+{
+    // string s = "{([]}";
+    string s = "][";
+    bool ans = isValidParenthesis(s);
+    if(ans)
+    {
+        cout << "yes valid" << endl;
+    }
+    else{
+        cout << "not valid" << endl;
+    }
+    return 0;
+}

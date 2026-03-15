@@ -15,3 +15,17 @@ public:
         }
     }
 };
+
+string reversestring(string s) {
+    int left = 0, right = s.size() - 1;
+    while(left < right) {
+        swap(s[left++], s[right--]);
+    }
+    return s;
+}
+
+int main() {
+    string str = "hello";
+    cout << reversestring(str);
+}
+

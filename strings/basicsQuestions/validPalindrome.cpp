@@ -57,6 +57,8 @@ public:
         return checkPalindrome(temp);
         
     }
+
+    
 };
 
 int main()
@@ -69,5 +71,14 @@ int main()
     cin >> len;
     //cin.getline(s,len);
 
-    //cout << isPalindrome(s);
+    string str = "naman";
+    // bool ans = isPalindrome(str);
+
+    // if(ans)
+    // {
+    //     cout << "yes " << endl;
+    // }
+    // else{
+    //     cout << "no " << endl;
+    // }
 }

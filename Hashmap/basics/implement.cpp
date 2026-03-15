@@ -61,3 +61,7 @@ int main()
     }
 
 }
+
+/* 
+search , insert , delete = O(1)
+*/

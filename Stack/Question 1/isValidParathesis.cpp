@@ -48,6 +48,21 @@ bool isValidParenthesis(string s)
         return false;
     }
 }
+
+int main()
+{
+    string s = "()";
+    bool ans = isValidParenthesis(s);
+    if(ans)
+    {
+        cout << "yes valid" << endl;
+    }
+    else{
+        cout << "not valid" << endl;
+    }
+    return 0;
+}
+
 // tc = O(N)
 // sc = O(N)
 

@@ -5,9 +5,7 @@
 using namespace std;
 //#include <unordered_map>
 
-class Solution {
-  public:
-    char nonRepeatingChar(string &s) {
+    char nonRepeatingChar(string s) {
         //  code here
         //char ans;
         
@@ -27,4 +25,10 @@ class Solution {
         }
         return '$';
     }
-};
+
+
+int main() {
+    string s = "aabbcddee";
+    cout << nonRepeatingChar("aabbccddee") << endl;
+    cout << nonRepeatingChar("aabbcddee");
+}

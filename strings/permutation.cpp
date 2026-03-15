@@ -75,7 +75,8 @@ void main()
 
 }
 
-// remove adjacent duplicant
+// remove all adjacent duplicant
+// azxxzy = ay
 
 // tc = O(n+m)
 //sc = O(1)

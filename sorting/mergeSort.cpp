@@ -11,13 +11,15 @@ void merge(int *arr ,int s ,int e)
     int *first = new int [len1];
     int *second = new int [len2];
 
-    // copy value
+    // copy value into subpart array
+    // left part
     int mainArrayIndex = s;
     for(int i=0 ; i<len1 ; i++)
     {
         first[i] = arr[mainArrayIndex++];
     }
 
+    // right part
     mainArrayIndex = mid+1;
     for(int i=0 ; i<len2 ; i++)
     {
@@ -25,8 +27,8 @@ void merge(int *arr ,int s ,int e)
     }
 
     // merge 2 sorted array
-    int index1 = 0;
-    int index2 = 0;
+    int index1 = 0;         // for left part
+    int index2 = 0;         // for right part
     mainArrayIndex = s;
 
     while(index1<len1 && index2<len2)

@@ -7,7 +7,7 @@ using namespace std;
 class SpecialStack {
     // data members
     stack<int> s;
-    int mini = INT_MAX;
+    int mini = INT8_MAX;
 
     public:
         

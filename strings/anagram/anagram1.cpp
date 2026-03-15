@@ -15,6 +15,7 @@ Bas order alag ho sakta hai
 #include<iostream>
 using namespace std;
 #include<string>
+#include<algorithm>
 #include<math.h>
 
 bool isAnagram(string s1,string s2)

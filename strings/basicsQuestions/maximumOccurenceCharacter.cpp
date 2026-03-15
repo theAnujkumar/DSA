@@ -11,9 +11,12 @@ char getMaxOccurChar(string s)
     for(int i=0 ; i<s.length() ; i++)
     {
         char ch = s[i];
+        // example a
+
         // lowercase
         int number=0;
         if(ch>='a' && ch<='z') {
+            // a-a = 0
             number = ch -'a';
         }
 
@@ -22,6 +25,7 @@ char getMaxOccurChar(string s)
         }
 
         arr[number]++;
+        // a ka count 0+1 = 1
     }
 
     // find maximum occurence character
@@ -29,16 +33,20 @@ char getMaxOccurChar(string s)
     for(int i=0 ; i<26 ; i++)
     {
         // arr[i] takes count no. of times occur this character
+        // 1
         if(maxi<arr[i])
         {
-            ans = i;
-            maxi = arr[i];
+            ans = i;                // 0 because 0th index
+            maxi = arr[i];          // 1
         }
     }
 
-    char finalAns = 'a' + ans;
+    char finalAns = 'a' + ans;         // 0+'a' = a
     return finalAns;
 }
+
+// tc = O(N+K)  n=string length , k=character set size(26)
+// sc = O(K)
 
 char getMaxOccuringChar(string s) {
     unordered_map<char,int> freq;
@@ -71,9 +79,9 @@ int main()
 
     cout << getMaxOccurChar(s);
 }
-
 // n = string ke length
 // tc = O(n)+O(1) = O(n)
 // sc = O(n)
 
 // 2nd loop saree string tak nhi chalta sirf 26,freq tak chalta hai
+

@@ -2,6 +2,7 @@
 #include<vector>
 #include<map>
 #include<math.h>
+#include<algorithm>
 using namespace std;
 
 int findSecondLargest(int n, vector<int> &arr)

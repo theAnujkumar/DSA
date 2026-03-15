@@ -11,8 +11,11 @@ string removeOccurence(string s , string part)
     }
     return s;
 }
-void main()
+int main()
 {
-
+    string s = "bsabcsdfg";
+    string part = "abc";
+    cout << removeOccurence(s,part);
+    return 0;
 }
 // kya s ke andar find vala part hai kya aur hai toh konse index par kya s.length se kam hai

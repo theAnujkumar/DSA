@@ -18,6 +18,10 @@ int main() {
     cout << removeDuplicates("programming");
 }  
 
+
+// tc = O(n)
+// sc = O(1)
+
 /*
 
 s = "programming"

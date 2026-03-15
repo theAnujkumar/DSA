@@ -26,6 +26,7 @@ int compress(vector<char> &chars)
         // store old character
         chars[ansIndex++] = chars[i];
         
+        // store old character ka count
         int count = j-i;
         if(count > 1)
         {
@@ -36,7 +37,7 @@ int compress(vector<char> &chars)
                 chars[ansIndex++] = ch;
             }
         }
-        // moving to new character
+        // moving to new/different character
         i=j;
     }
     return ansIndex;

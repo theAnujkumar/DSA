@@ -47,4 +47,8 @@ int main()
     // cout << "size is, " << sizeof(name) << "!\n";
     // cout << "size is, " << sizeof(string) << "!\n";
 
+    // strcmp
+    // strlen
+    // strcpy
+
 }
