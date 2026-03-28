@@ -3,6 +3,9 @@
 // how find index in 2D array
 // transpose
 // reverse
+// rotate
+// printing like wave,spiral
+// remember left , right , up , down
 
 
 /*
