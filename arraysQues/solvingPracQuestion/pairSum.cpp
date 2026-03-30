@@ -64,6 +64,26 @@ int pairSum(vector<int> &arr, int n, int target)
 // 	}
 // }
 
+int pairSumOptimal(vector<int> &arr, int n, int target)
+{
+    int count = 0;
+    unordered_map<int,int> mp;
+
+    for(int i=0 ; i<n ; i++)
+    {
+        int complement = target - arr[i];
+
+        // if it occur already just increment count according to complement in map
+        if(mp.find(complement) != mp.end())
+        {
+            count += mp[complement];
+        }
+        // insert into map
+        mp[arr[i]]++;
+    }
+    return count;
+}
+
 main()
 {
     //int arr1[5] = {1,2,3,4,5};
@@ -74,4 +94,12 @@ main()
 
     int ans = pairSum(arr1,n,target);
     cout << "ans is " << ans << endl;
+
+    vector <int> arr2 = {1,5,7,-1,5};
+    //vector <int> arr1 = {1,3,5,6};
+    int n2 = arr2.size();
+    int target2 = 6;
+
+    int ans1 = pairSumOptimal(arr2,n2,target2);
+    cout << "ans is " << ans1 << endl;
 }
