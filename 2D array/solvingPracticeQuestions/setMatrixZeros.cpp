@@ -100,6 +100,47 @@ void setZeros(vector<vector<int>> &matrix)
     }
 }
 
+void setZeros2(vector<vector<int>> &matrix)
+{
+    int r = matrix.size();
+    int c = matrix[0].size();
+
+    vector<int> row,col;
+
+    // Step 1: mark rows & columns which we want to do zeros
+    for(int i=0 ; i<r ; i++)
+    {
+        for(int j=0 ; j<c ; j++)
+        {
+            if(matrix[i][j] == 0)
+            {
+                row.push_back(i);
+                col.push_back(j);
+            }
+        }
+    }
+
+    // row-> 0
+    for(int i=0 ; i<row.size() ; i++)
+    {
+        int index = row[i];
+        for(int j=0 ; j<c ; j++)
+        {
+            matrix[index][j] = 0;
+        }
+    }
+
+    // col -> 0
+    for(int i=0 ; i<col.size() ; i++)
+    {
+        int index = col[i];
+        for(int j=0 ; j<r ; j++)
+        {
+            matrix[j][i] = 0;
+        }
+    }
+}
+
 int main()
 {
     // vector<vector <int>> number = {{7,19,3} , {4,21,0}};
@@ -113,6 +154,13 @@ int main()
 
     setZeros(number);
     cout << "after calling " << endl;
+    for(auto row: number){
+        for(auto val: row)
+            cout<<val<<" ";
+        cout<<endl;
+    }
+
+    setZeros2(number);
     for(auto row: number){
         for(auto val: row)
             cout<<val<<" ";

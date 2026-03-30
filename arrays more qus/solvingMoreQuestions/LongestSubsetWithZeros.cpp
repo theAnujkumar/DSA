@@ -54,6 +54,12 @@ int LongestSubsetWithZeroSum(vector < int > arr) {
 
 }
 
+int main()
+{
+    vector<int> arr = {1, 3, -1, 4, -4};
+    cout << LongestSubsetWithZeroSum(arr);
+}
+
 // tc = O(n)
 // sc = O(n)
 
