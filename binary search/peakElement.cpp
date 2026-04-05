@@ -15,6 +15,8 @@ int peakMaximum(int arr[] , int n)
             s = mid + 1;
         }
 
+        // arr[mid] >= arr[mid+1]
+        // not use e = mid -1 because may be we move previous to peak element
         else{
             e = mid;
         }

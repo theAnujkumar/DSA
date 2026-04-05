@@ -17,6 +17,12 @@ void reverse(string& str , int s , int e)
     reverse(str,s,e);
     // reverse(str,s++,e--);  not use this it will became into infinite loop
     
+    /*
+    swap(str[s],str[e]);
+    //s++ , e--;
+
+    reverse(str,s+1,e-1);
+    */
 }
 
 int main()

@@ -17,7 +17,7 @@ int binarySearch(int arr[] , int size , int key)
         }
 
         // go to right part
-        if(key > arr[mid])
+        else if(key > arr[mid])
         {
             start = mid + 1;
         }
@@ -40,7 +40,7 @@ main()
     int odd[5] = {3,8,11,14,16};
 
     int indexEven = binarySearch(even , 6 , 6);
-    cout << "the index of 12 is " << indexEven;
+    cout << "the index of 6 is " << indexEven;
 
     int indexOdd = binarySearch(odd , 5 ,20);
     cout << "the index of 20 is " << indexOdd;

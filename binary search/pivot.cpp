@@ -11,7 +11,7 @@ int getPivot(int arr[] , int n)
     while(s<e)
     {
         if(arr[mid] >= arr[0])
-        // first line
+        // first line so move to next line
         {
             s = mid + 1;
         }
