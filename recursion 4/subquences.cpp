@@ -32,3 +32,18 @@ vector<string> subquences(string str)
     solve(str,output,index,ans);
     return ans;
 }
+
+int main()
+{
+    string str = "abc";
+    vector<string> ans = subquences(str);
+    for(auto i:ans)
+    {
+        // for(auto j:i)
+        // {
+        //     cout << j << " ";
+        // }
+        cout << i << " ";
+        cout << endl;
+    }
+}

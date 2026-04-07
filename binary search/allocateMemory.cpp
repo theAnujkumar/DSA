@@ -32,8 +32,10 @@ bool isPossible(int arr[] , int n ,int m ,int mid)
     
     return true;
 }
+
 int allocateBooks(int arr[] , int n , int m)
 {
+    // m = student , n = no. of pages
     int s = 0;
     int sum = 0;
 

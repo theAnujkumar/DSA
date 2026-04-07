@@ -37,7 +37,7 @@ double morePrecision(int n , int precision , int firstPart)
     for(int i=0 ; i<precision ; i++)
     {
         factor = factor/10;
-        for(double j=ans ; j*j<ans ; j=j+factor)
+        for(double j=ans ; j*j<n ; j=j+factor)
         {
             ans = j;
         }
@@ -48,7 +48,7 @@ double morePrecision(int n , int precision , int firstPart)
 
 main()
 {
-    int n = 81;
+    int n = 37;
     //int n = 1000000;
 
     int firstPart = sqrtInteger(n);
