@@ -59,3 +59,12 @@ int main()
 
 
 }
+
+// Flatten → O(n*m)
+// Sort → O(nm log(nm))
+
+// 👉 Total:
+
+// tc = O(n*m log(n*m))
+
+// sc = O(n*m)
