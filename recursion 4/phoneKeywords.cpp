@@ -34,7 +34,7 @@ vector <string> letterCombinations(string digits)
 
     string output="";
     int index = 0;
-    string mapping[10] = {"", "" , "abc" , "def" , "ghi"};
+    string mapping[10] = {"", "" , "abc" , "def" , "ghi","jkl","mno","pqrs","tuv","wxyz"};
 
     solve(digits,output,index,ans,mapping);
     return ans;
