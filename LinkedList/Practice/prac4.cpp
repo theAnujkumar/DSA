@@ -75,3 +75,4 @@ node* mergeSort(node *head)
     node* result = merge(left,right);
     return result;
 }
+

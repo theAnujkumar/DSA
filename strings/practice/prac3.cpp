@@ -1,7 +1,25 @@
 #include<iostream>
 #include<string>
 #include<vector>
+#include<unordered_set>
+#include<unordered_map>
 using namespace std;
+
+//s = "programming"
+string removeDuplicates(string s)
+{
+  //unordered_map<char,int> freq;
+  unordered_set<char> seen;
+  string ans = "";
+  for(char ch:s)
+  {
+    if(!seen.count(ch))
+    {
+      ans+= ch;
+      seen.insert(ch);
+    }
+  }
+}
 
 // input = {a,a,a,b,b,c,d,d};
 // output = {a,3,b,2,c,d,2}

@@ -92,6 +92,7 @@ int main()
 
     insertAtTail(tail,15);
 
+    //insertAtTail(tail,12);
     print(head);
 
     if(isCircular(head))

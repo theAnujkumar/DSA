@@ -111,7 +111,7 @@ Node* removeDuplicates(Node* &head)
 
                 // we can use head instead of curr
 
-    // while(curr != NULL || curr->next != NULL)
+    // while(curr != NULL && curr->next != NULL)
     // {
     //     if(curr->data == curr->next->data)
     //     {

@@ -59,9 +59,13 @@ class Solution {
         Node* temp = middle->next;
         middle->next = reverse(temp);
         
+        // Node* reverseNode = reverse(temp);
+        
         // compare both half
         Node* head1 = head;
         Node* head2 = middle->next;
+
+        // while(reverseNode)
         
         while(head2 != NULL)
         {

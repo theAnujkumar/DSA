@@ -13,3 +13,4 @@
         // int index = newChar - 'a';
         // count2[index]++;
 // for parenthesis problem use balance , count method
+// how to take common prefix

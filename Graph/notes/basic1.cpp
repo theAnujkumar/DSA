@@ -21,3 +21,5 @@
 //   adjList[v].insert(u);
 //  }
 // unordered_map<int,set<int>> &adjList , vector<int,pair<int,int>> &edges
+
+// remember how bfs,dfs work

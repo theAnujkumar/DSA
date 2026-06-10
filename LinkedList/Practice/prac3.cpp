@@ -182,3 +182,65 @@ int main()
 //     insertAtPosition(head,tail,3,22);
 //     print(head);
 // }
+
+class Solution {
+    private:
+    
+        Node* getMid(Node* head)
+        {
+            Node* slow = head;
+            Node* fast = head->next;
+            
+            while(fast != NULL && fast -> next != NULL)
+            {
+                fast = fast -> next -> next;
+                slow = slow -> next;
+            }
+            return slow;
+        }
+        
+        Node* reverse(Node* head)
+        {
+            Node* curr = head;
+            Node* prev = NULL;
+            Node* next = NULL;
+            
+            while(curr != NULL)
+            {
+                next = curr->next;
+                curr->next = prev;
+                prev = curr;
+                curr = next;
+            }
+            return prev;
+        }
+        
+  public:
+    // Function to check whether the list is palindrome.
+    bool isPalindrome(Node *head) {
+        
+        if(head -> next == NULL)
+        {
+            return true;
+        }
+
+        // get middle
+        Node* middle = getMid(head);
+
+        Node* temp = middle->next;
+
+        Node* reverseNode = reverse(temp);
+
+        while(reverseNode)
+        {
+            if(head->data != reverseNode->data)
+            {
+                return false;
+            }
+            
+        }
+    }
+};
+
+// tc = O(n)
+// sc = O(1)

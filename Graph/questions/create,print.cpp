@@ -43,6 +43,11 @@ vector < vector < int >> printAdjacency(int n, int m, vector < vector < int >> &
 T.C of adding edges = O(m) ,  S.C of adding edges = O(m)
 T.C of printing edges = O(n*m) ,  S.C of printing edges = O(1)
 sc = O(n+m)
+
+
+Creating adjacency list
+All nodes + neighbours:
+O(n + m)
 */
 
 /*

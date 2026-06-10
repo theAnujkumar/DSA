@@ -34,6 +34,16 @@ node* buildTree(node* root)
     root->right = buildTree(root->right);
     return root;
 }
+
+/*
+T(n)=T(left)+T(right)+O(1)
+
+Poore tree ke liye:
+
+T(n)=O(n)
+SC(n) = O(N)  and for balanced tree O(logN)
+
+*/
 int main()
 {
     node *root = NULL;

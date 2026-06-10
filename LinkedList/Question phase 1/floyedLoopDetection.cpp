@@ -154,6 +154,7 @@ void removeLoop(Node* head)
 
     Node* temp = startAtNode;
 
+    // remember use temp->next not temp
     while(temp->next != startAtNode)
     {
         temp = temp -> next;

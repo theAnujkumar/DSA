@@ -20,8 +20,8 @@ int minimumParentheses(string pattern)
             {
                 balance--;
             }
-            // next char = (
-            // so for doing balance required ) 
+            // if i get firstly )
+            // so for doing balance required (
             else{
                 count++;
             }
@@ -60,7 +60,8 @@ int minimumParentheses(string pattern)
 
 int main()
 {
-    string s = "((()()(";
+    // string s = "((()()(";
+    string s = ")(";
     int ans = minimumParentheses(s);
     cout << "output is " << ans << endl;
 }

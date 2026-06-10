@@ -24,7 +24,7 @@ bool isAnagram(string s1,string s2)
             return false;
     }
 
-
+    // check whether all character count will become 0 or not
     for(auto count : freq)
     {
         if(count.second != 0)

@@ -15,6 +15,7 @@ class node {
     }
 };
 
+// use dfs
 node* buildTree(node* root) {
 
     cout << "Enter the data: " << endl;
@@ -68,6 +69,12 @@ void levelOrderTraversal(node* root)
         
     }
 }
+/*
+    T(n)=O(n)
+    SC(n) = O(N) 
+    push,pop,print ki complexity = O(1) * n operations   
+*/
+
 
 void inorder(node* root)
 {
@@ -104,7 +111,12 @@ void postorder(node* root)
     postorder(root->right);
     cout << root->data << " " ;
 }
+/*
+    T(n)=O(n)
+    SC(n) = O(N)    
+*/
 
+// bfs
 void buildFromLevelOrder(node* &root) 
 {
     queue<node*> q;
@@ -141,6 +153,10 @@ void buildFromLevelOrder(node* &root)
         }
     }
 }
+/*
+    T(n)=O(n)
+    SC(n) = O(N)    
+*/
 
 int main()
 {
