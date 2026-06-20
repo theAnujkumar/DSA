@@ -36,6 +36,16 @@ int main()
     // cout << "\nsum is = " << sum[i];
     //     i++;
 
+    int sum2 = 0;
+    for(int r=0 ; r<3 ; r++)
+    {
+        for(int c=0 ; c<3 ; c++)
+        {
+            sum2+= arr[r][c];
+        }
+    }
+    cout << "total sum of all elements " <<  sum2 << endl;
+
     for(int r=0 ; r<3 ; r++)
     {
         int i=0;
@@ -45,8 +55,8 @@ int main()
         {
             sum[i] = sum[i] + arr[r][c];
         }
-        cout << "sum of " << i << "row is " << sum[i] << endl;
-        i++;
+        cout << "sum of " << r << "row is " << sum[i] << endl;
+        //i++;
     }
     // find sum of each row
 

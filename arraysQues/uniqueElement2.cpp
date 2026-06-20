@@ -14,7 +14,14 @@ vector<int> findUnique(vector<int> &arr) {
         if (freq[num] == 1)
             uniqueElements.push_back(num);
     }
-
+                        //    OR
+    // for(auto num:freq)
+    // {
+    //     if(num.second == 1)
+    //     {
+    //         uniqueElements.push_back(num.first);
+    //     }
+    // }
     return uniqueElements;
 }
 

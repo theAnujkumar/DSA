@@ -22,3 +22,8 @@ for(auto b: number)
 int row = matrix.size();
 int col = matrix[0].size();
 */
+
+// for matrix/vector
+    // for(int i = 0; i < 3; i++) {
+    //     reverse(arr[i].begin(), arr[i].end());
+    // }
