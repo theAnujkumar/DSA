@@ -47,3 +47,5 @@ int main()
         cout << endl;
     }
 }
+
+// tc = O(2^n)

@@ -167,3 +167,17 @@ int main()
         cout<<endl;
     }
 }
+
+/*
+You are given an N x M integer matrix. Your task is to modify this matrix in place
+ so that if any cell contains the value 0, then all cells in the same row and column 
+ as that cell should also be set to 0.
+
+ If the given grid is this:
+[7, 19, 3]
+[4, 21, 0]
+
+Then the modified grid will be:
+[7, 19, 0]
+[0, 0,  0]
+*/

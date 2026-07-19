@@ -14,3 +14,9 @@
         // count2[index]++;
 // for parenthesis problem use balance , count method
 // how to take common prefix
+
+/*
+Case	                                Time	    Space
+string s (pass by value)	            O(n²)	    O(n) (copy due to pass-by-value)
+const string &s (pass by reference)	    O(n²)	    O(1)
+*/

@@ -27,9 +27,19 @@ int main()
     getline(cin,arr1);
     cout << "string is " << arr1;
 
+    string sub = "hello world";
+    cout << sub.substr(6,5);  // world
+    cout << sub.find("world"); // 6
+
+    /*
+    substr(pos, len) → substring extract karta hai
+    find(str) → substring ka position return karta hai
+    */
+
     string s = "ChatGPT is awesome!";
     cout << sizeof(s) << endl;    // always 24
     cout << s.size() << endl;     // 20
+
 
     /*
         | Member            | Size (64-bit machine) |

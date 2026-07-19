@@ -18,7 +18,7 @@ int main()
     cout << "size is " << q.size() << endl;
 
     q.pop();
-
+    cout << "front is " << q.front() << endl;
     q.pop();
     cout << "front is " << q.front() << endl;
     cout << "size is " << q.size() << endl;

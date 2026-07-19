@@ -34,6 +34,7 @@ bool findRedundantBrackets(string &s)
                     {
                         isRebundant = false;
                     } 
+                    // for pop +,-,*,/
                     st.pop();
                 }
 
@@ -41,7 +42,7 @@ bool findRedundantBrackets(string &s)
                 {
                     return true;
                 }
-                // for line no 22 bracket '('
+                // for line no 19 bracket '('
                 st.pop();
             }
         }

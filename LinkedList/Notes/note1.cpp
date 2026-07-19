@@ -26,3 +26,19 @@ Super Important Patterns (Yaad rakhna)
         K-group reverse
         
 */
+
+/*
+        // step 2 = recursion dekh lenga
+    if(next!=NULL)
+    {
+        head->next = kReverse(next,k);
+    }
+        focous on such cases
+
+        // get mid 
+        Node* middle = getMid(head);
+        
+        //  reverse list after middle
+        Node* temp = middle->next;
+        middle->next = reverse(temp);
+*/

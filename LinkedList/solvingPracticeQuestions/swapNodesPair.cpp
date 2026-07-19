@@ -77,3 +77,8 @@ Node* pairsSwap(Node *head)
     //     temp_next = temp_next->next;
     // }
 }
+
+/*
+Time: O(n)
+Space: O(1)
+*/

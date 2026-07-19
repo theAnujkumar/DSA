@@ -74,4 +74,46 @@ public:
         return area;
     }
 };
+
+// extend till get smaller element
 //      O(n) both
+
+/*
+Example 1
+Heights = [2, 2, 2]
+
+Index:
+
+0 1 2
+
+Previous smaller:
+
+-1 -1 -1
+
+Next smaller:
+
+-1 -1 -1
+
+Ab pehle element ke liye:
+
+Agar next = -1
+
+width = -1 - (-1) - 1 = -1 ❌
+
+Galat.
+
+Lekin
+
+next = n = 3;
+
+to
+
+width = 3 - (-1) - 1
+      = 3
+
+Area
+
+2 × 3 = 6
+
+Bilkul sahi.
+*/

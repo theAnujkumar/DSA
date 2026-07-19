@@ -27,3 +27,6 @@ int col = matrix[0].size();
     // for(int i = 0; i < 3; i++) {
     //     reverse(arr[i].begin(), arr[i].end());
     // }
+
+//for(int i=0;i<3;i++)
+        //reverse(arr[i], asrr[i]+3);

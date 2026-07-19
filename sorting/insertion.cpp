@@ -20,3 +20,8 @@ int insertionSort(int arr[] , int n)
         arr[j+1] = temp;
     }
 }
+
+/*
+Selection Sort → "Sabse chhota dhoondo, swap karo."
+Insertion Sort → "Current element uthao, sahi jagah insert karo."
+*/

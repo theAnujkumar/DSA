@@ -50,3 +50,13 @@ int findMinimumCost(string str) {
         return ans;
 
 }
+
+int main()
+{
+    // how many bracket swap
+    //string s = "}}{{";
+    string s = "{{{{}}";
+    int ans = findMinimumCost(s);
+    cout << "invalid no . " << ans << endl;
+    return 0;
+}
