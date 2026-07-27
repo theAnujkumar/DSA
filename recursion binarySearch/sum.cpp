@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+#include<vector>
 
 int getSum(int arr[] , int size)
 {
@@ -27,6 +28,18 @@ int arraySum(int arr[], int n) {
 
     // recursive case
     return arr[n-1] + arraySum(arr, n-1);
+}
+
+int sum(int index , vector<int> &arr)
+{
+    if(index >= arr.size())
+    {
+        return 0;
+    }
+    else{
+        return arr[index] + sum(index+1,arr);
+        // f(0,arr) = arr[0] + f(1,arr)
+    }
 }
 
 int main()

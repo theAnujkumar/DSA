@@ -42,6 +42,7 @@ int main()
         //if(str[i]>='0' && str[i]<='9')
         if(isdigit(str[i]))
         {
+            // str[i] gives ascii value of number so -48 need
             price+= (str[i] - 48);
             cout << "price is " << price << endl;
         }
