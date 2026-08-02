@@ -100,6 +100,9 @@ Node* removeDuplicate(Node* &head)
             prev = curr;
             curr = curr->next;
         }
+        
+        //if(seen.find(curr->data) != seen.end())
+        // "Agar current node ki value pehle se set me hai, to ye duplicate hai."
         else{
             prev->next = curr->next;
             Node* del = curr;
