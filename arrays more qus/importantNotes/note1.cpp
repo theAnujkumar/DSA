@@ -17,3 +17,13 @@
 //      sort(arr.begin(),arr.end(),greater<int>());         // O(nlogn)  in vector
         sort(arr , arr+n);              in array
 */
+
+/*
+Agar tum vector by reference (vector<int>&) pass karte instead of by value,
+toh copy nahi banti → Space = O(1).
+Tab complexity hoti:
+
+reverse → O(n) time, O(1) space
+
+print → O(n) time, O(1) space
+*/

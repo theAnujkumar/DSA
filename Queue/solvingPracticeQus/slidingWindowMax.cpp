@@ -1,5 +1,90 @@
+// Case 2: Kadane’s Algorithm (variable size, max subarray sum)
+
+//👉 Problem: Find maximum sum of any continuous subarray (any size)
+
+#include<iostream>
+#include<vector>
+#include<deque>
+using namespace std;
+
+vector<int> maxSlidingWindow(vector<int> &arr , int k)
+{
+    deque<int> dq;
+    int n = arr.size();
+    vector<int> result;
+
+    int maxVal = INT8_MIN;
+    for(int i=0 ; i<k ; i++)
+    {
+        if(arr[i] > maxVal)
+        {
+            dq.push_back(i);
+            maxVal = arr[i];
+        }
+    }
+   
+}
+
+
+// vector<int> maxSlidingWindow(vector<int> &arr , int k)
+// {
+//     int n = arr.size();
+//     vector<int> result;
+
+//         int windowSum = 0;
+//         int maxVal = INT8_MIN;
+
+//         // find max value for k size window
+//         for(int i=0 ; i<k ; i++)
+//         {
+//             maxVal = max(maxVal,arr[i]);
+//         }
+//         result.push_back(maxVal);
+//         //int maxSum = windowSum;
+
+//         for(int i=k ; i<n ; i++)
+//         {
+//             int maxVal = INT8_MIN;
+
+//             for(int j=i-k+1 ; j<=i ; j++)
+//             {
+//                 maxVal = max(maxVal,arr[j]);
+//             }
+//             result.push_back(maxVal);
+//         }
+//      return result;
+// }
+// tc = O(n*k)
+
+int main()
+{
+    //vector<int> arr = {1,3,-1,-3,5,3,6,7};
+    vector<int> arr = {1,3,-1,2,6};
+    int k = 3;
+
+    cout << "original array " << endl;
+    for(auto a : arr)
+    {
+        cout << a << " " ;
+    }
+    vector<int> ans = maxSlidingWindow(arr,k);
+
+    cout << "outcome array " << endl;
+    for(auto a : ans)
+    {
+        cout << a << " " ;
+    }
+}
+
+// tc = O(n)
+// sc = O(1)
+
+
 /*
-You are given an array of integers nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position.
+You are given an array of integers nums, there is a sliding window of size k 
+which is moving from the very left of the array to the very right. 
+You can only see the k numbers in the window. Each time the 
+sliding window moves right by one position.
 
 Return the max sliding window.
 

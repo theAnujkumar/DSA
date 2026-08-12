@@ -35,8 +35,8 @@ class Rectangle{
     public:
     void displayData()
     {
-        cout << "length is" << l << endl;
-        cout << "breadth is" << b << endl;
+        cout << "length is " << l << endl;
+        cout << "breadth is " << b << endl;
         cout << "area is" << CalculateArea(6,7) << endl;
     }
 
@@ -54,9 +54,9 @@ int main()
 {
     hero h1;
     hero *h2 = new hero;
-    cout << h1.getAge();
+    cout << h1.getAge() << endl;
     h1.setName("sher");
-    cout << h1.getName();
+    cout << h1.getName() << endl;
 
     Rectangle r1(5,6) ;
     Rectangle *r2 = new Rectangle(5,6);

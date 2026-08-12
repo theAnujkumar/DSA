@@ -84,6 +84,25 @@ int pairSumOptimal(vector<int> &arr, int n, int target)
     return count;
 }
 
+
+vector<int> twoSum(vector<int> &arr , int k)
+{
+    unordered_map<int,int> mp;
+    for(int i=0 ; i<arr.size() ; i++)
+    {
+        int needed = k-arr[i];
+        //if(mp[needed] != 0)
+        // it means needed present already in map so return ans
+        if(mp.find(needed) != mp.end())
+        {
+            return {mp[needed],i};
+        }
+        mp[arr[i]] = i;
+    }
+    return {};
+}
+// in this print index of output result
+
 main()
 {
     //int arr1[5] = {1,2,3,4,5};

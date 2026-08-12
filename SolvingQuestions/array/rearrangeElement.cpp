@@ -28,6 +28,7 @@ int main()
             freq[arr2[i]]--;
         }
     }
+   // after that all elements freq would become 0 except elements which not present in arr2
 
     // left elements in arr1 short in ascending order
     int start = j;

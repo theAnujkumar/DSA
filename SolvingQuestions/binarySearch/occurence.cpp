@@ -15,6 +15,7 @@ int firstOccur(int *arr , int n , int key)
         if(arr[mid] == key)
         {
             cout << "index is " << mid << endl;
+            // store mid value into ans because it may be ans
             ans = mid;
             e = mid-1;
         }

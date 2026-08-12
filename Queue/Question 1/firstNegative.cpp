@@ -8,7 +8,7 @@ using namespace std;
         vector<int> ans;
         int n=arr.size();
         
-        // process first window of k element
+        // process first window of k element and store index of negative no.
         for(int i=0 ; i<k ; i++)
         {
             if(arr[i] < 0)

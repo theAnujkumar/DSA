@@ -35,7 +35,7 @@ int main()
     int n = str.size();
 
     int x = 10;
-    char y = 'a';   // 97  char into into
+    char y = 'a';   // 97  char into int
     int z = x+y;
     cout << "z is " << z << endl;
 

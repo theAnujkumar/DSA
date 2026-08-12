@@ -9,6 +9,7 @@ void mergeArray(int arr1[] , int n , int arr2[] , int m , int arr3[])
 
     while(i<n && j<m)
     {
+        // firstly insert smallest elements
         if(arr1[i] < arr2[j])
         {
             arr3[k] = arr1[i];
@@ -20,7 +21,7 @@ void mergeArray(int arr1[] , int n , int arr2[] , int m , int arr3[])
         }
     }
 
-    // copy first array elements
+    // copy first array elements same beacuse these are left
     while(i<n)
     {
         arr3[k] = arr1[i];
@@ -28,6 +29,7 @@ void mergeArray(int arr1[] , int n , int arr2[] , int m , int arr3[])
         i++;
     }
 
+    // copy second array elements same beacuse these are left
     while(j<m)
     {
         arr3[k] = arr2[j];
@@ -54,3 +56,8 @@ int main()
 
     printArray(arr3 , 8);
 }
+
+// tc = O(n*m)
+// sc = O(n+m)
+
+// sorting ascending descending in arraymoreQus in solvingQus

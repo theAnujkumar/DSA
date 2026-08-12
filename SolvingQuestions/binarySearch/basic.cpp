@@ -29,6 +29,7 @@ bool isBinarySearch(vector<int> &arr , int n , int key)
     return false;
 }
 
+// return index of element
 int BinarySearch(vector<int> &arr , int n , int key)
 {
     int s = 0;
@@ -60,17 +61,17 @@ int main()
     vector<int> arr1 = {1,3,5,6,8,9};
     int n1 = arr1.size();
     int key = 8;
-    bool ans = isBinarySearch(arr1,n1,key);
-    cout << "ans is " << ans << endl;
+    // bool ans = isBinarySearch(arr1,n1,key);
+    // cout << "ans is " << ans << endl;
 
-    if(ans)
-    {
-        cout << "element is present " << endl;
-    }
-    else
-    {
-        cout << "element is not present " << endl;
-    }
+    // if(ans)
+    // {
+    //     cout << "element is present " << endl;
+    // }
+    // else
+    // {
+    //     cout << "element is not present " << endl;
+    // }
 
     cout << "element present at index " << BinarySearch(arr1,n1,key) << endl;
 

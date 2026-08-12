@@ -81,7 +81,8 @@ int oddSum(long long num)
 
 int main()
 {
-    long long val = 24;
+    long long val = 153;
+    //long long val = 24;
     int ans = 0;
 
     if(isArmstrong(val))

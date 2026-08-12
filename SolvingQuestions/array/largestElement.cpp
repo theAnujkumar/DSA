@@ -21,6 +21,7 @@ int main()
     for(int i=0 ; i<5 ; i++)
     {
         freq[arr2[i]]++;
+        // find maximum element
         mx = max(mx,arr2[i]);
     }
 
@@ -40,6 +41,7 @@ int main()
         //     return 0;
         // }
 
+        // it means max element should occur only 1 times and normal element only 2 times
         if((it.first == mx && it.second > 1) || (it.second > 2))
         {
             cout << "false" << endl;

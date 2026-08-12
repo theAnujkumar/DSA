@@ -28,6 +28,7 @@ class Solution {
                     q.pop();
                 }
                 
+                // if it occur minimum 1 times then stored into ans
                 else{
                     ans.push_back(q.front());
                     break;

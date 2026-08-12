@@ -4,6 +4,7 @@ using namespace std;
 int countDistinctwayToClimb(int nstairs)
 {
     // base case
+    // same stair pe jane ke tarike
     if(nstairs == 0)
     {
         return 1;

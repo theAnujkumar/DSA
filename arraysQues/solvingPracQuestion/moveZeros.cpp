@@ -4,6 +4,7 @@ using namespace std;
 void moveZero(int arr[] , int n)
 {
     // shift all non-zero elements to left
+    // take nonZero as a pointer / index
     
     int nonzero=0;
     for(int j=0 ; j<n ; j++)

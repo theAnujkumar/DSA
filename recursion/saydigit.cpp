@@ -21,7 +21,7 @@ void saydigit(int n ,string arr[])
 
     // vapas jate hue print karvate jana
     // ex 412 
-    cout << arr[digit] << endl;
+    cout << arr[digit] << " ";
 }
 
 int main()

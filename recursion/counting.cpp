@@ -27,6 +27,16 @@ void printNumbers(int i) {
     printNumbers(i + 1);   // Recursive call
 }
 
+void printCounting(int i , int n)
+{
+    if(i>n)
+    {
+        return;
+    }
+    cout << i << " " ;
+    printCounting(i+1,n);
+}
+
 int main()
 {
     int n;
@@ -34,8 +44,12 @@ int main()
     cin >> n;
 
     counting(n);
+    cout << endl;
 
     printNumbers(1);
+    cout << endl;
+
+    printCounting(1,n);
 }
 
 /*

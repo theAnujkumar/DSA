@@ -37,6 +37,7 @@ class hero {
     }
 
     // copy constructor call
+    // deep copy -> different memory access
     hero(hero &temp)
     {
         cout << "copy constructor call " << endl;

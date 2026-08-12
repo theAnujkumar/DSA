@@ -78,6 +78,6 @@ int main()
     // cout << "health is " << h1.getHealth() << endl;
     // cout << "level is " << h1.level << endl;
 
-    // size of h2 is 4
+    // size of h2 is 4 because of dynamic
 
 }

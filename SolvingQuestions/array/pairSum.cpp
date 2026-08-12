@@ -36,6 +36,7 @@ vector<int> twoSum(vector<int> &arr , int k)
     {
         int needed = k-arr[i];
         //if(mp[needed] != 0)
+        // it means needed present already in map so return ans
         if(mp.find(needed) != mp.end())
         {
             return {mp[needed],i};
@@ -63,7 +64,7 @@ int main()
     //vector<int> arr = {5,9,12,23,31};
     vector<int> arr = {2,7,11,15};
     int n = arr.size();
-    int k = 9;
+    int k = 13;
 
     bool ans = pairSum(arr,k);
     if(ans)
@@ -71,10 +72,10 @@ int main()
         cout << "yes pair exist " << endl;
     }
     else{
-        cout << "yes pair exist " << endl;
+        cout << "no pair exist " << endl;
     }
 
     vector<int> result = twoSum(arr,k);
-    cout << "result is " << result[0] << " " << result[1] << endl;
+    cout << "result is at index " << result[0] << " " << result[1] << endl;
     return 0;
 }
