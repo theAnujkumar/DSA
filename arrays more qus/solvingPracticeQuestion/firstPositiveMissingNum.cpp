@@ -35,7 +35,7 @@ int firstMissing(int arr[], int n)
         {
             break;
         }
-        // ignore
+        // ignore or wait until 1 number come
         //if(arr[i] <= 0)
     }
     return cnt;

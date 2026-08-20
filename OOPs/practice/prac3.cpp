@@ -1,15 +1,8 @@
-// object creation time invock
-// ramesh.hero
-
 #include<iostream>
+#include<string.h>
 using namespace std;
 
-                        // class 3
-
 // make a class
-// used to initialize object of class 
-// invoke at object creation time
-// no return type no input parameter
 
 class hero {
      
@@ -19,25 +12,27 @@ class hero {
     int health;
 
     public:
+    char *name;
     char level;
+    static int timeToComplete;
+    static int timeTaken;
 
-    // make constructor
+    // make simple constructor
     // default constructor dead
     hero()
     {
         cout << "constructor call" << endl;
+        name = new char[100];
     }
 
     // parameterised constructor
-    // this keyword refer to current object
-    // stores the address of current object
     hero(int health)
     {
-        cout << "this " << this << endl;
+        cout << "this" << this << endl;
         this -> health = health;
     }
 
-    hero(int health , char level)
+     hero(int health , char level)
     {
         this -> level = level;
         this -> health = health;
@@ -47,15 +42,21 @@ class hero {
     hero(hero &temp)
     {
         cout << "copy constructor call " << endl;
+        char *ch = new char [strlen(temp.name) + 1];
+        strcpy(ch,temp.name);
+
+        this->name = ch;
         this->health = temp.health;
         this->level = temp.level;
     }
 
     void print()
     {
-        cout <<"level is " << level << endl;
-        cout <<"health is " << health << endl;
-        cout << endl;
+        //cout << "health is " << health << endl;
+        cout << "Name: "  << this -> name << " "; 
+        cout << "health is: " << this -> health << " ";
+        cout << "level is: " << this -> level << endl;
+        //cout << "level is " << level << endl;
     }
 
     int getHealth()
@@ -77,33 +78,43 @@ class hero {
     {
         level = ch;
     }
+
+    void setName(char name[])
+    {
+        strcpy(this->name,name);
+    }
+
+    // static function
+    static int random()
+    {
+       return timeToComplete ;
+        //cout << this -> health << endl;  not excess 
+        //cout << level ;  not a static member
+    }
+
+    static int taken()
+    {
+        return timeTaken;
+    }
+
+    // destructor
+    ~hero()
+    {
+        cout << "destructor call" << endl;
+    }
 };
+
+// initialize
+
+int hero::timeToComplete = 5;
+int hero::timeTaken = 10;
 
 int main()
 {
-    cout << "hi" << endl;
-    // creation of object
-    // hero constructor will be call
-    hero ramesh;
-    cout << "hello" << endl;
+    cout << hero::random() << endl;
+    // not need object create
+    cout << hero::timeToComplete << endl;
 
-    hero *raju = new hero();
-
-
-    // creation of object
-    hero sher(20);
-    sher.print();
-
-    cout << "address is " << &sher << endl;
-
-    hero *h1 = new hero(30);
-    h1->print();
-
-    hero temp(10,'G');
-    temp.print();
-
-    hero newHero(temp);
-    newHero.print();
-    //cout << "hello" << endl;
-
+    cout << hero::timeTaken << endl;
+    cout << hero::taken() << endl;
 }

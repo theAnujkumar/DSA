@@ -73,3 +73,18 @@ int findEquilibriumIndex(vector<int> &arr) {
 // }
 
  
+int main()
+{
+    vector<int> arr = {1,7,3,6,5,6};
+    int n = arr.size();
+
+    for(auto a : arr)
+    {
+        cout << " " << a ;
+    }
+    cout << endl ;
+    
+    int ans = findEquilibriumIndex(arr);
+    cout << "Equilibrium Index is " << ans ;
+
+}

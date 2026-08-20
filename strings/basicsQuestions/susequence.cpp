@@ -43,6 +43,7 @@ bool subSequence(string str1,string str2)
             i++;
         }
     }
+    // it means j value cnt is same as s2.length
     return j == s2;
 }
 

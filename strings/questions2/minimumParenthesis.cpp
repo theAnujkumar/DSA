@@ -30,33 +30,33 @@ int minimumParentheses(string pattern)
     // example string "((()("  bal = 3-1 = 2 , count = 1 total =3
     return count+balance ;
 }
-// int minimumParentheses(string pattern) {
-//     int n=pattern.length();
-//     int count = 0;
+int minimumParentheses1(string pattern) {
+    int n=pattern.length();
+    int count = 0;
 
-//     for(int i=0 ; i<n-1 ; i++)
-//     {
-//         int first = pattern[i];
-//         int second = pattern[i+1];
+    for(int i=0 ; i<n-1 ; i++)
+    {
+        int first = pattern[i];
+        int second = pattern[i+1];
         
-//             if((first == ')'  && second == '(')
-//             || (first == '('  && second != '(') || (first == ')'  && second != ')'))
-//             {
-//                 count++;
-//             }
-//             // else if((first == '('  && second != ')'))
-//             // {
-//             //     continue;
-//             // }
-//             // else if((first == '('  && second == '(') || (first == ')'  && second == ')')){
-//             // count++;
-//             // }
+            if((first == ')'  && second == '(')
+            || (first == '('  && second != '(') || (first == ')'  && second != ')'))
+            {
+                count++;
+            }
+            else if((first == '('  && second != ')'))
+            {
+                continue;
+            }
+            else if((first == '('  && second == '(') || (first == ')'  && second == ')')){
+            count++;
+            }
         
-//         //count++;
+        count++;
               
-//     }
-//     return count;
-// }
+    }
+    return count;
+}
 
 int main()
 {
@@ -64,4 +64,7 @@ int main()
     string s = ")(";
     int ans = minimumParentheses(s);
     cout << "output is " << ans << endl;
+
+    int ans2 = minimumParentheses1(s);
+    cout << "output is " << ans2 << endl;
 }

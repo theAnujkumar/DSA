@@ -33,8 +33,9 @@ void check(int arr[] , int n)
 int main()
 {
     //int arr[5] = {3,4,5,1,2};
-    int arr[5] = {1,2,3,4,5};
-    //int arr[5] = {3,5,7,1,6};
+    int arr[5] = {1,2,3,4,5};       // sorted 
+    //int arr[5] = {3,4,5,1,2};       // rotated 
+    //int arr[5] = {3,5,7,1,6};     // sorted and rotated X
 
     check(arr,5);
 

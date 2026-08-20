@@ -64,9 +64,11 @@ int main()
     cout << "ch4 became " << d4 << endl;        // give the ascii value of ch4 or 'a'
 
     char ch5 = '1';
-    int ch6 = ch5 - 48;
-    cout << "1 became " << ch5 << endl;
-    cout << "1 became " << ch6 << endl;
+    //int ch6 = ch5 - 48;
+                                // OR
+    int ch6 = ch5 - '0';
+    cout << "1 charcter is " << ch5 << endl;
+    cout << "1 character change into int " << ch6 << endl;
 
     //string ans = changeToSmallLarge(str);
    // cout << "final string ans is " << ans << endl;

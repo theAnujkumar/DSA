@@ -3,7 +3,6 @@ using namespace std;
 
 
 // encapusation  -> wrapping up data members and function in single entity
-//  data hide and security increases
 class Student{
 
     private:

@@ -28,8 +28,8 @@ int main()
     cout << "string is " << arr1;
 
     string sub = "hello world";
-    cout << sub.substr(6,5);  // world
-    cout << sub.find("world"); // 6
+    cout << sub.substr(6,5)  << endl;  // world
+    cout << sub.find("world") << endl; // 6
 
     /*
     substr(pos, len) → substring extract karta hai

@@ -18,6 +18,7 @@ int findEquilibriumIndex(vector<int> &arr) {
 
     for(int i=0 ; i<n ; i++)
     {
+        // for rightsum exclude leftsum and current element
         int rightSum = totalSum - leftSum - arr[i];
 
         if(leftSum == rightSum)
@@ -51,5 +52,22 @@ int findEquilibriumIndex(vector<int> &arr) {
     //     }
     // }
     // return -1;
+
+}
+
+ 
+int main()
+{
+    vector<int> arr = {1,7,3,6,5,6};
+    int n = arr.size();
+
+    for(auto a : arr)
+    {
+        cout << " " << a ;
+    }
+    cout << endl ;
+    
+    int ans = findEquilibriumIndex(arr);
+    cout << "Equilibrium Index is " << ans ;
 
 }

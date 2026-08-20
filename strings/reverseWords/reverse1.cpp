@@ -24,6 +24,8 @@ string reverseWords(string s)
     {
         if(ch != ' ')
             words += ch;
+        
+         // space came it means next word came
         else{
             reverse(words.begin(),words.end());
             result += words + " ";

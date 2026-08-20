@@ -7,3 +7,9 @@
 | Divide & Conquer (half input)   | O(log n) or O(n log n) | O(log n)         |
     binary search , merge,quick sort
 */
+
+/*
+    int remainingPart = getSum(arr+1 , size-1);
+    int ans = arr[0] + remainingPart;
+    arr+1  , size-1  , index+1,-1
+*/

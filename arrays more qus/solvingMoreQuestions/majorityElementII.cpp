@@ -30,6 +30,24 @@ vector<int> majorityElementII(vector<int> &arr)
     return ans;
 }
 
+int main()
+{
+    vector<int> arr = {3,2,2,1,5,2,3};
+    
+    cout << "original array " << endl;
+    for(auto a : arr)
+    {
+        cout << a << " " ;
+    }
+    
+    cout << "outcome  " << endl;
+    vector<int> ans = majorityElementII(arr);
+    for(auto a : ans)
+    {
+        cout << a << " " ;
+    }
+    
+}
 /*
 Sample Input 1 :
 2

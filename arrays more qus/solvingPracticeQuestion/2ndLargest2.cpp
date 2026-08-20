@@ -38,4 +38,20 @@ int findSecondLargest(int n, vector<int> &arr)
     return secondLargest;
 }
 
+
+int main()
+{
+    vector<int> arr = {1, 2, 3, 4, 5};
+    int n = arr.size();
+
+    for(auto a : arr)
+    {
+        cout << " " << a ;
+    }
+    cout << endl ;
+    
+    int ans = findSecondLargest(n,arr);
+    cout << "2nd largest element is " << ans ;
+
+}
 // ex [5,10,5,8]

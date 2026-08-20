@@ -19,7 +19,9 @@ string longestCommonPrefix(vector<string> &arr, int n)
         if(first[i] == last[i])
         {
             ans += first[i];
+            cout << "ans is " << ans << endl;
         }
+        // different character so break or came out from loop and return ans
         else{
             break;
         }
@@ -32,7 +34,7 @@ int main() {
     int n=arr.size();
     //cout << n;
     string ans = longestCommonPrefix(arr,n);
-    cout << "ans is " << ans << endl;
+    cout << "final ans is " << ans << endl;
 }
 
 /*

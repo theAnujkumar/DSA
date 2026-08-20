@@ -22,6 +22,7 @@ vector<int> maxSlidingWindow(vector<int> &arr , int k)
         {
             int maxVal = INT8_MIN;
 
+            // it will increment loop value by 1 ex-> after 1 check from 3
             for(int j=i-k+1 ; j<=i ; j++)
             {
                 maxVal = max(maxVal,arr[j]);

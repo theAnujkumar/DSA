@@ -7,9 +7,9 @@ class Human{
         string name;
 
     public:
-        int height;
-        int weight;
-        int age;
+    int height;
+    int weight;
+    int age;
 
     public:
     int getAge()
@@ -21,16 +21,16 @@ class Human{
         this->weight = w;
     }
 
-    string getName()
-    {
-        return name;
-    }
-    void setName(string name)
-    {
-        this->name = name;
-    }
-    
 
+    string getName()
+        {
+            return name;
+        }
+        void setName(string name)
+        {
+            this->name = name;
+        }
+    
 };
 
 class Male: public Human
@@ -53,13 +53,12 @@ class Female : public Human
     }
 };
 
-
 int main()
 {
-    // child class can access of properties of their parent class
+    
     Male obj1;
-    Female f1;
 
+    Female f1;
     cout << obj1.age << endl;
     cout << obj1.height << endl;
     cout << obj1.weight << endl;
@@ -75,6 +74,5 @@ int main()
 
     f1.setName("hero");
     cout << f1.getName() << endl;
-
     return 0;
 }

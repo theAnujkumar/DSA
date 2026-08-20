@@ -35,6 +35,7 @@ vector<int> findArraySum(vector<int> &a , int n ,vector<int> &b ,int m)
          int val1 = a[i];
          int val2 = b[j];
 
+        // it will automatically add carry
         int sum = carry ;
 
         if(i>=0)
