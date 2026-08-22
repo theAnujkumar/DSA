@@ -24,6 +24,8 @@ vector<vector<string>> getGroupedAnagrams(vector<string> &inputStr, int n)
         }
         string key = "";
 
+        // it would store all keys elements in ascending order alphabatically
+        // aet for tea,ate,eat
         for(int x : freq)
         {
             key += to_string(x) + '#';

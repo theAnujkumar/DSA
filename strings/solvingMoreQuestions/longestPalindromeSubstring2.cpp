@@ -14,6 +14,7 @@ void expand(string &s,int left,int right,int &start,int &maxlen)
         // check if any other palindrome exist of more length than this
         if(right - left + 1 > maxlen)
         {
+            // here maxLen point to last char or end
             maxlen = right - left + 1;
             start = left; 
         } 

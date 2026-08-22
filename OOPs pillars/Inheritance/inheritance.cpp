@@ -73,6 +73,7 @@ int main()
     f1.setWeight(50);
     cout << f1.weight << endl;
 
+    // here child class access and modify of properties of their parent class
     f1.setName("hero");
     cout << f1.getName() << endl;
 

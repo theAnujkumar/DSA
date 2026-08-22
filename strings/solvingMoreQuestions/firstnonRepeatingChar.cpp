@@ -28,5 +28,5 @@ int main() {
     string s = "aabbcddee";
     cout << firstNonRepeatingCharacter("aabbccddee") << endl;
     cout << firstNonRepeatingCharacter("aabbcddee") << endl;
-    cout << firstNonRepeatingCharacter(" ABcd") << endl;
+    cout << firstNonRepeatingCharacter("ABcd") << endl;
 }

@@ -36,6 +36,7 @@ class bulldog: public Dog{
 int main()
 {
     Dog d1 ;
+    // here inherit property of their parent beacuse it have not speak function
     d1.speak();
     d1.bark();
 
@@ -43,6 +44,7 @@ int main()
     b1.speak();
     b1.bark();
 
+    d1.age = 6;
     cout << "animal age is " << d1.age << endl;
     
     return 0;

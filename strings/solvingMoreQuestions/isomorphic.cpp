@@ -15,7 +15,7 @@ using namespace std;
     //         {
     //             for(auto val : seen)
     //             {
-    //                 if(val = t[i])
+    //                 if(val == t[i])
     //                     return 0;
     //                 else if(seen[ch] != t[i])
     //                     return 0;
@@ -70,16 +70,21 @@ using namespace std;
 
         for(int i = 0; i < s.length(); i++)
         {
+            // both character are unseen so create mapping
             if(mapST.find(s[i]) == mapST.end() &&
             mapTS.find(t[i]) == mapTS.end())
             {
                 mapST[s[i]] = t[i];
                 mapTS[t[i]] = s[i];
             }
+            // either one or none are unseen
+            // one mapping already exist but mapping with another element
+            // example a -> b already but a->c cannot be
             else
             {
                 if(mapST[s[i]] != t[i] || mapTS[t[i]] != s[i])
                     return false;
+                // else both are mapping right ex->  g->d and d->g
             }
         }
 

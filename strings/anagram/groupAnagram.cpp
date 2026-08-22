@@ -14,11 +14,13 @@ vector<vector<string>> getGroupedAnagrams(vector<string> &inputStr, int n)
     // take ans to store
     vector<vector<string>> ans;
 
+    // create mapping
     for(auto str : inputStr)
     {
         string temp = str;
         sort(temp.begin(),temp.end());
         // push into map
+        // it will create mapping like aet -> eat,ate,tea
         mp[temp].push_back(str);
     }
 

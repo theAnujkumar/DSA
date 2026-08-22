@@ -196,11 +196,148 @@ string encoding(string &message)
     return message;
 }
 
+vector<vector<string>> getGroupedAnagram(vector<string> &inputStr, int n)
+{
+    // take hashmap for map key->list of strings
+    unordered_map<string,vector<string>> mp;
+
+    // take ans to store
+    vector<vector<string>> ans;
+
+    // create mapping
+    for(auto str : inputStr)
+    {
+        string temp = str;
+        sort(temp.begin(),temp.end());
+        // push into map
+        mp[temp].push_back(str);
+    }
+
+    // for each iteration store ans
+    for(auto &itr : mp)
+    {
+        ans.push_back(itr.second);
+    }
+    return ans;
+}
+
+
+vector<vector<string>> getGroupedAnagrams(vector<string> &inputStr, int n)
+{
+    // take hashmap
+    unordered_map<string,vector<string>> mp;
+
+    // create ans vector
+    vector<vector<string>> ans;
+
+    // create mapping
+    for(auto str : inputStr)
+    {
+        string temp = str;
+        sort(temp.begin(),temp.end());
+        mp[temp].push_back(str);
+    }
+
+    // store into ans
+    for(auto &itr : mp)
+    {
+        ans.push_back(itr.second);
+    }
+    return ans;
+}
+
+int count(int left  ,int right , string &str)
+{
+    int cnt = 0;
+    while(left>=0 && right<=str.size() && str[left]==str[right])
+    {
+        cnt+=1;
+        left++;
+        right--;
+    }
+    return cnt;
+}
+
+int specialPalindromes(string &str)
+{
+    int result = 0;
+    int n = str.size();
+
+    for(int i=0 ; i<n ; i++)
+    {
+        // for odd length
+        result+= count(i,i,str);
+
+        // even length
+        result+= count(i,i+1,str);
+    }
+    return result;
+}
+
+bool isIsomorphic(string s, string t) 
+{
+    char mapST[256] = {};
+    char mapTS[256] = {};
+
+    for(int i=0 ; i<s.length() ; i++)
+    {
+        // if both are unseen create mapping
+        if(mapST[s[i]]==0 && mapTS[t[i]]==0)
+        {
+            mapST[s[i]] = t[i];
+            mapST[t[i]] = s[i];
+        }
+
+        // any one or both are seen
+        else{
+            if(mapST[s[i]]!=t[i] && mapTS[s[i]]!=t[i])
+            {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+bool isIsomorphic2(string s, string t) 
+{
+    if(s.length() != t.length())
+    {
+        return false;
+    }
+    unordered_map<char,char> mapST;
+    unordered_map<char,char> mapTS;
+
+    for(int i=0 ; i<s.length() ; i++)
+    {
+        // if both are unseen create mapping
+        if(mapST.find(s[i])==mapST.end() && mapTS[t[i]]==0)
+        {
+            mapST[s[i]] = t[i];
+            mapST[t[i]] = s[i];
+        }
+        // any one or both are seen
+        else{
+            if(mapST[s[i]]!=t[i] && mapTS[s[i]]!=t[i])
+            {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
 int main() {
     string s = "aaaabbbccdaa";
     //string ans = encode(s);
     string ans = encoding(s);
     cout << "output is " << ans << endl;
+
+    string s1 = "egg", s2 = "adg";
+    if (isIsomorphic2(s1, s2))
+        cout << " Isomorphic hai";
+    else
+        cout << "Isomorphic nahi hai";
 
     // "a4b3c2d1a2". output
 }

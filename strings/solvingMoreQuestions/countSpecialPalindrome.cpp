@@ -8,6 +8,7 @@ using namespace std;
 int count(int left, int right, string s)
 {
     int res = 0;
+    // if left and right are same then increase right and decrease left
     while((left>=0 && right<=s.size()) && s[left] == s[right])
     {
         res+= 1;

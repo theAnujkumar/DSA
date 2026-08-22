@@ -34,16 +34,22 @@ class hybrid: public Animal , public Human{
         {
             cout << "this is hybrid speaking" << endl;
         }
+        void speak()
+        {
+            cout << "here hybrid speak" << endl;
+        }
 };
 
 
 int main()
 {
+    Human H1;
     hybrid h1;
     // here hybrid gives priority its function firstly ex- takes speak() function in both 
     // human and hybrid
     
     h1.bark();
+    H1.speak();
     h1.speak();
     h1.speakHybird();
     
