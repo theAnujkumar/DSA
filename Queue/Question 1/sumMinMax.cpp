@@ -10,9 +10,13 @@ int solve(int *arr , int n , int k)
     // addition of first k window
     for(int i=0 ; i<k ; i++)
     {
+        // it will contain elements in decreasing order
+        // we have to find max so , pop until max found
         while(!maxi.empty() && arr[maxi.back()] <= arr[i])
             maxi.pop_back();
 
+        // it will contain elements in increasing order
+        // we have to find min so , pop until min found
         while(!mini.empty() && arr[mini.back()] >= arr[i])
             mini.pop_back();
 
@@ -20,24 +24,24 @@ int solve(int *arr , int n , int k)
         mini.push_back(i);
     }
 
-     int ans = 0;
+    int ans = 0;
 
+    // find sum 
     ans += arr[maxi.front()] + arr[mini.front()];
 
     //remaining windows ko process karlo
     for(int i=k; i<n; i++) {
-
-
-
         //next window
 
         //removal
         while(!maxi.empty() && i - maxi.front() >=k) {
             maxi.pop_front();
+            // it will give max element in k size window
         }
 
         while(!mini.empty() && i - mini.front() >=k) {
             mini.pop_front();
+            // it will give min element in k size window
         }
 
         //addition
@@ -51,6 +55,7 @@ int solve(int *arr , int n , int k)
         maxi.push_back(i);
         mini.push_back(i);    
 
+        // for last loop
         ans += arr[maxi.front()] + arr[mini.front()];
     }
     return ans;
@@ -63,3 +68,5 @@ int main()
     int k = 4;
     cout << solve(arr,7,k) << endl;
 }
+
+// so that i can track max , min element

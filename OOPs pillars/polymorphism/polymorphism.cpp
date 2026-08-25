@@ -5,7 +5,7 @@ using namespace std;
 
 class A {
 
-    // method overloading with different type of argument
+    // method overloading with different type/data types of argument
     public:
         void sayHello()
         {

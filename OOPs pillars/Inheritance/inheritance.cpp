@@ -39,7 +39,7 @@ class Male: public Human
     string color;
 
     void sleep(){
-        cout << "this is sleeping";
+        cout << "male is sleeping";
     }
 };
 

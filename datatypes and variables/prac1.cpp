@@ -17,7 +17,7 @@ int main() {
     int size = sizeof(a);
     cout << "\n the size of integer is " << size ;
 
-    // typecasting
+    // typecasting  -> int to char
 
     char z = 97 ;
     cout << "\n the alphabet of 97 is " << z ;

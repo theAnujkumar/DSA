@@ -71,7 +71,7 @@ int oddSum(int num)
 
 int main()
 {
-    int num = 2;
+    int num = 153;
 
     if(isArmstrong(num))
     {

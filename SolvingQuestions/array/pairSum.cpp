@@ -77,5 +77,21 @@ int main()
 
     vector<int> result = twoSum(arr,k);
     cout << "result is at index " << result[0] << " " << result[1] << endl;
+
+    // unordered_set<int> seen;
+    // for(int i=0 ; i<n ; i++)
+    // {
+    //     int diff = k-arr[i];
+    //     if(seen.count(diff))
+    //     {
+    //         cout << diff << " " << arr[i] << endl;
+    //         break;
+    //     }
+    //     seen.insert(arr[i]);
+    // }
+    // else{
+    //     cout << "no pair found " << endl;
+    // }
     return 0;
+
 }

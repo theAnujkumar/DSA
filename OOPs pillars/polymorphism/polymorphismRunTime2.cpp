@@ -4,7 +4,7 @@ using namespace std;
 class Animal
 {
     public:
-        void speak()
+        virtual void speak()
         {
             cout << "speaking" << endl;
         }
@@ -13,7 +13,7 @@ class Animal
 class Dog: public Animal
 {
     public:
-    void speak()
+    void speak() override
     {
         cout << "barking" << endl;
     }
@@ -29,9 +29,9 @@ int main()
 
     Animal *d2 = new Dog;
     d2->speak();
-    // it would call parent/animal
+    // it would not call parent/animal
+    // it would call itself using virtual override
 
-    // we want to change their implementation
     
     return 0;
 }

@@ -41,12 +41,14 @@ int largestRowSum(int arr[][3],int r,int c)
 
     for(int r=0 ; r<3 ; r++)
     {
+        // find sum of each row
         int sum = 0;
         for(int c=0 ; c<3 ; c++)
         {
             sum = sum + arr[r][c];
         }
         
+        // compare new sum with previous sum and find max
         if(sum > maxi)
         {
             maxi = sum;

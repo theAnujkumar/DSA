@@ -55,7 +55,7 @@ int main()
         {
             sum[i] = sum[i] + arr[r][c];
         }
-        cout << "sum of " << r << "row is " << sum[i] << endl;
+        cout << "sum of " << r << " row is " << sum[i] << endl;
         //i++;
     }
     // find sum of each row

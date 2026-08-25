@@ -16,6 +16,7 @@ class Animal{
         {
             cout << "animal bark/speak" << endl;
         }
+
 };
 
 class Dog: public Animal{
@@ -49,14 +50,13 @@ int main()
 
     d1.age = 6;
     cout << "animal age is " << d1.age << endl;
-    
-    // focous on here
+
     Dog *b2 = new bulldog;
     b2->bark();
 
     Animal *a2 = new bulldog;
     a2->bark();
-
+    
     return 0;
 }
 
