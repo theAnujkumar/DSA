@@ -36,6 +36,12 @@ bool isPossible(int arr[] , int n ,int m ,int mid)
 int allocateBooks(int arr[] , int n , int m)
 {
     // m = student , n = no. of pages
+
+    if(m>n)
+    {
+        return -1;
+    }
+
     int s = 0;
     int sum = 0;
 
@@ -48,12 +54,14 @@ int allocateBooks(int arr[] , int n , int m)
     int ans = -1;
     int mid = s + (e-s)/2;
 
+    // here we have search space b/w s and e
     while(s<=e)
     {
         if(isPossible(arr,n,m,mid))
         {
             cout<<" Mid returned TRUE" << endl;
             ans = mid;
+            // we have to find min.
             e = mid - 1;
         }
         else
@@ -71,3 +79,8 @@ main()
 
     cout << "the answer is " << allocateBooks(arr , 4 , 2);
 }
+
+/*
+You have to allocate the book to ‘m’ students such that
+ the maximum number of pages assigned to a student is minimum.
+*/

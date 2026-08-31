@@ -33,3 +33,62 @@ char toLowerCase(char ch)
     }
 }
 */
+
+/*
+// take maxlen
+        maxLen = max(maxLen,right-left+1);
+*/
+
+/*
+// reverse each word
+    int start=0;
+    for(int i=0 ; i<=n ; i++)
+    {
+        // jabh space ya end char mile toh do reverse
+        if(i==n || input[i]==' ')
+        {
+            reverse(input.begin() + start , input.begin() + i);
+            start = i+1;
+            // next word start after i (not use start=start+1)
+        }
+    }
+*/
+
+/*
+// push all words into stack
+    string word = "";
+    for(int i=0 ; i<n ; i++)
+    {
+        if(input[i] == ' ')
+        {
+            st.push(word);
+            word = "";
+        }
+        else{
+            word += input[i];
+        }
+    }
+    st.push(word);
+
+    here focous on last line for end words push into stack
+*/
+
+/*
+            encoding logic
+            substring logic
+            Isomorphic
+
+int specialPalindromes(string &str)
+{
+    int res = 0;
+    for(int i=0 ; i<str.size() ; i++)
+    {
+        // for odd case
+        res+= count(i,i,str);
+
+        // for even case
+        res+= count(i,i+1,str);
+    }
+    return res;
+}
+*/

@@ -64,3 +64,6 @@ public:
         }
     }
 };
+
+// stack 1 work from left to right
+// stack 2 work from right to left 

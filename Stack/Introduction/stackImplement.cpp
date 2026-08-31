@@ -25,6 +25,7 @@ class Stack
             top++;
             arr[top] = element;
         }
+        // if(top == -1) or size-top <= 1
         else{
             cout << "stack overflow" << endl;
         }
@@ -36,6 +37,7 @@ class Stack
         {
             top--;
         }
+        // top < 0
         else
         {
             cout << "stack underflow" << endl;

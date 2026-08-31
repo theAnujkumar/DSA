@@ -40,6 +40,7 @@ vector<int> twoSum(vector<int> &arr , int k)
         if(mp.find(needed) != mp.end())
         {
             return {mp[needed],i};
+            //return {mp[needed],arr[i]};
         }
         mp[arr[i]] = i;
     }

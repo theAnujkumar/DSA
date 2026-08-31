@@ -17,17 +17,17 @@ int main() {
 
     cout << "\n" ;
     int z = 10;
-    cout << "z = " << z;
-    cout << "z = " << z++;
-    cout << "z = " << z;
+    cout << "z = " << z << endl;
+    cout << "z = " << z++ << endl;
+    cout << "z = " << z << endl;
 
-    cout << "z = " << ++z;
-    cout << "z = " << z;
+    cout << "z = " << ++z << endl;
+    cout << "z = " << z << endl;
 
     int t = 10;
     cout << "\n" ;
-    cout << "t = " << t;
-    cout << "t1 = " << ++t + ++t;
+    cout << "t = " << t << endl;
+    cout << "t1 = " << ++t + ++t << endl;
     //                 11 and 12  =  12 and 12 = 24
 
 }

@@ -11,19 +11,19 @@ bool isPossible(int stalls[] , int k ,int mid)
         if(stalls[i]-lastPos >= mid)
         {
             cowCount ++;
-        if(cowCount == k)
-        {
-            return true;
-        }
-        // normal last position increase +1
-        lastPos = stalls[i];
+            if(cowCount == k)
+            {
+                return true;
+            }
+            // normal last position increase +1
+            lastPos = stalls[i];
         }
     }
     return false;
 }
 int agressiveCows(int stalls[] , int k)
 {
-    //sort(stalls.begin() , sort.end());
+    //sort(stalls.begin() , stalls.end());
 
     int s = 0;
     int maxi = -1;
@@ -41,6 +41,7 @@ int agressiveCows(int stalls[] , int k)
         if(isPossible(stalls,k,mid))
         {
             ans = mid ;
+            // find max possible soln
             s = mid + 1;
         }
         else{
@@ -74,4 +75,22 @@ int aggressiveCows(vector<int> &stalls, int k)
     }
     return ans;
 }
+*/
+
+/*
+You are given an array 'arr' consisting of 'n' integers which denote the 
+position of a stall.
+
+
+
+You are also given an integer 'k' which denotes the number of aggressive cows.
+
+
+
+You are given the task of assigning stalls to 'k' cows such that the minimum 
+distance between any two of them is the maximum possible.
+
+
+
+Print the maximum possible minimum distance.
 */

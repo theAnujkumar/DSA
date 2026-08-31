@@ -26,7 +26,7 @@ string reverseStringWordWise(string input)
         {
             reverse(input.begin() + start , input.begin() + i);
             start = i+1;
-            // next word start (not use start=start+1)
+            // next word start after i (not use start=start+1)
         }
     }
     

@@ -74,3 +74,20 @@ for(int i=0 ; i<3 ; i++)
         }
     }
 */
+
+/*
+cout << "number are \n";
+    for(int c=0 ; c<3 ; c++)
+    {
+        int i=0;
+        int sum[i] = {0};
+        
+        for(int r=0 ; r<3 ; r++)
+        {
+            sum[i] = sum[i] + arr[r][c];
+        }
+        cout << "sum is " << sum[i] << endl;
+        i++;
+    }
+    // col wise sum
+*/

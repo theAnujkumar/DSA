@@ -74,3 +74,6 @@ int main()
     maxSubArray(arr);
 
 }
+
+// tc = O(n)
+// sc = O(1)

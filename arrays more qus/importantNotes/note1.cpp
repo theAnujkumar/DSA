@@ -27,3 +27,55 @@ reverse → O(n) time, O(1) space
 
 print → O(n) time, O(1) space
 */
+
+/*
+kadane's like
+for(int i=k ; i<n ; i++)
+        {
+            int maxVal = INT8_MIN;
+
+            // it will increment loop value by 1 ex-> after 1 check from 3
+            for(int j=i-k+1 ; j<=i ; j++)
+            {
+                maxVal = max(maxVal,arr[j]);
+            }
+            result.push_back(maxVal);
+        }
+i-k+1;
+*/
+
+/*
+// remember 0 index
+    prefix[0] = arr[0];
+
+    for(int i=1 ; i<size ; i++)
+    {
+        prefix[i] = prefix[i-1] + arr[i];
+    }
+    return prefix;
+*/
+
+/*
+sliding window
+for(int i=k ; i<n ; i++)
+        {
+            windowSum = windowSum + arr[i] - arr[i-k];
+            maxSum = max(maxSum,windowSum);
+        }
+*/
+
+/*
+kadane's algo
+int maxSum = arr[0];
+    int currSum = arr[0];
+
+    for(int i=1 ; i<arr.size() ; i++)
+    {
+        currSum = max(arr[i],currSum + arr[i]);
+        maxSum = max(currSum,maxSum);
+    }
+    return maxSum;
+*/
+
+// // for rightsum exclude leftsum and current element
+//        int rightSum = totalSum - leftSum - arr[i];

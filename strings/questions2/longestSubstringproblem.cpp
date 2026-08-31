@@ -11,6 +11,7 @@ int lengthOfLongestSubstring(string s)
     for(int right=0 ; right<s.length() ; right++)
     {
         // until get char same as in right part move left pointer
+        // it means in left side or in seen map already exist current element/right
         while(seen.count(s[right]))
         {
             // if element already in set then remove from set and left++

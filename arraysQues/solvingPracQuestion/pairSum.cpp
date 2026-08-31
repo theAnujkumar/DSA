@@ -96,6 +96,7 @@ vector<int> twoSum(vector<int> &arr , int k)
         if(mp.find(needed) != mp.end())
         {
             return {mp[needed],i};
+            // return {mp[needed],arr[i]};
         }
         mp[arr[i]] = i;
     }
@@ -121,4 +122,19 @@ main()
 
     int ans1 = pairSumOptimal(arr2,n2,target2);
     cout << "ans is " << ans1 << endl;
+
+    // unordered_set<int> seen;
+    // for(int i=0 ; i<n ; i++)
+    // {
+    //     int diff = k-arr[i];
+    //     if(seen.count(diff))
+    //     {
+    //         cout << diff << " " << arr[i] << endl;
+    //         break;
+    //     }
+    //     seen.insert(arr[i]);
+    // }
+    // else{
+    //     cout << "no pair found " << endl;
+    // }
 }

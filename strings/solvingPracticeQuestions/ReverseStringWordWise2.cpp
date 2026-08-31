@@ -22,6 +22,7 @@ string reverseStringWordWise(string input)
             word += input[i];
         }
     }
+    // here focous on last line for end words push into stack
     st.push(word);
 
     // pop from stack 1 by 1 string

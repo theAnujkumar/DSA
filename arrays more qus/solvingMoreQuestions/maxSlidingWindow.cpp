@@ -52,6 +52,7 @@ int main()
     }
 }
 
+// but here is O(n*k)
 // tc = O(n)
 // sc = O(1)
 

@@ -41,6 +41,7 @@ int main()
 
     int p = 10;
     char q = 'a';   // a se 10 character agee
+    // typecasting  -> int to char
     char t = p+q;
     cout << "t is " << t << endl;
 

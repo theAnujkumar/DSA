@@ -21,6 +21,7 @@ int getPivot(int arr[] , int n)
         }
         mid = s + (e-s)/2;
     }
+    cout << "pivot element is " << arr[s] << endl;
     return s;
 }
 
