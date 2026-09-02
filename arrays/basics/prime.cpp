@@ -22,6 +22,12 @@ bool isPrime(int n)
 int main()
 {
     int n = 124;
+
+    if(n<2)
+    {
+        cout << "number is not prime " << n << endl;
+    }
+    
     bool ans = isPrime(n);
     if(ans)
     {

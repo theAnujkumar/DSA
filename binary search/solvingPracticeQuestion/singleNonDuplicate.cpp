@@ -20,6 +20,7 @@ int singleNonDuplicate(vector<int>& arr)
 		}
 		else{
 			e = mid;
+			// e = mid-1;
 		}
 	}
 	return arr[s];
