@@ -79,3 +79,21 @@ int maxSum = arr[0];
 
 // // for rightsum exclude leftsum and current element
 //        int rightSum = totalSum - leftSum - arr[i];
+
+/*
+    pair sum 
+    // unordered_set<int> seen;
+    // for(int i=0 ; i<n ; i++)
+    // {
+    //     int diff = k-arr[i];
+    //     if(seen.count(diff))
+    //     {
+    //         cout << diff << " " << arr[i] << endl;
+    //         break;
+    //     }
+    //     seen.insert(arr[i]);
+    // }
+    // else{
+    //     cout << "no pair found " << endl;
+    // }
+*/

@@ -14,7 +14,8 @@
 // For example:
 // Consider the two strings 'P' = "abfyg" and 'Q' = "gabfy" 
 
-// If we cyclically rotate String 'P' to the right once. The resulting string P becomes "gabfy" which is equal to String 'Q'. 
+// If we cyclically rotate String 'P' to the right once. The resulting string P 
+// becomes "gabfy" which is equal to String 'Q'. 
 
 // Therefore it is possible to convert String 'P' to String 'Q'.
 // Detailed explanation ( Input/output format, Notes, Images )
@@ -30,9 +31,11 @@
 
 // 2) If we rotate "caba" to the right, the resulting string becomes "acab".
 
-// 3) If we rotate "acab" to the right, the resulting string becomes "baca" which is equal to String 'Q'.
+// 3) If we rotate "acab" to the right, the resulting string becomes "baca" 
+// which is equal to String 'Q'.
 
-// Therefore it is possible to convert String 'P' to String 'Q'. Hence, we will return 1 in this case.
+// Therefore it is possible to convert String 'P' to String 'Q'. Hence, 
+// we will return 1 in this case.
 // Sample Input 2:
 // aabca
 // bacaa
@@ -48,4 +51,62 @@
 // Follow Up:
 // Can you solve this in O(N) time?
 
+#include <bits/stdc++.h> 
+#include <iostream>
+#include <unordered_map>
+#include <string>
+using namespace std;
 
+int isCyclicRotationBruteForce(string P, string Q)
+{
+    if(P.length() != Q.length())
+    {
+        return 0;
+    }
+
+    int n = P.length();
+
+    for (int i = 0; i < n; i++) {
+        if (P == Q) return 1;
+        
+        // Cyclic right rotation: shift last char to front
+        P = P.back() + P.substr(0, n - 1);
+    }
+    
+    return 0;
+}
+
+int isCyclicRotation(string P, string Q) {
+    if (P.length() != Q.length()) 
+        return 0;
+    
+    string temp = P + P;
+    return (temp.find(Q) != string::npos) ? 1 : 0;
+}
+
+bool rotateString(string s,string goal)
+{
+    if (s.size() != goal.size()) 
+        return 0;
+
+    s+= s;
+
+    int m = goal.size();
+    int n = s.size();
+
+    for(int i=0 ; i<=n-m ; i++)
+    {
+        bool match = true;
+        for(int j=0 ; j<m ; j++)
+        {
+            if(s[i+j] != goal[j])
+            {
+                match = false;
+                break;
+            }
+        }
+        if(match)   
+            return true;
+    }
+    return false;
+}

@@ -1,7 +1,5 @@
 // how use map
 
-
-
 // reverse each word me   why and how i,start using 
 // getline , size , length
 // map , frequency , count , seen
