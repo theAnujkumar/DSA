@@ -90,3 +90,25 @@ int specialPalindromes(string &str)
     return res;
 }
 */
+
+/*
+
+void expand(string &s,int left,int right,int &start,int &maxlen)
+{
+    int n = s.size();
+
+    // yes,palindrome
+    while(left>=0 && right<n && s[left]==s[right])
+    {
+        // check if any other palindrome exist of more length than this
+        if(right - left + 1 > maxlen)
+        {
+            // here maxLen point to last char or end
+            maxlen = right - left + 1;
+            start = left; 
+        } 
+        left--;
+        right++;
+    }
+}
+*/

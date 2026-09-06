@@ -27,4 +27,6 @@ int main()
     cout << "after" << i << endl;
     cout << "after" << p << endl;
     cout << "after" << p1 << endl;
+    // cout << "after" << *p << endl;
+    // cout << "after" << **p1 << endl;
 }

@@ -1,4 +1,6 @@
 //   focous on address and value
+//  in char , string 
+//  in function , pointer , double pointer
 
 /*
 int num = 2;

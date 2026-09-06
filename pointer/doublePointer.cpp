@@ -25,6 +25,8 @@ int main()
     cout << "address is " << &p << endl;
     cout << "address is " << p2 << endl;
 
+    cout << "address of p2 " << &p2 << endl;
+
 
     return 0;
 }
