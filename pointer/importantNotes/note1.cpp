@@ -1,6 +1,7 @@
 //   focous on address and value
 //  in char , string 
 //  in function , pointer , double pointer
+//  how increment and decrement works like ->  (*a)++  , (**p)--  , (++q)
 
 /*
 int num = 2;
@@ -54,4 +55,13 @@ cout << "address of first memory " << arr << endl;
     
     // print only particular char of string
     cout << *c << endl;
+*/
+
+/*
+int first = 110;
+    int *p = &first;
+    int **q = &p;
+    int second = (**q)++ + 9;
+
+    cout << first << " " << second << endl;
 */
