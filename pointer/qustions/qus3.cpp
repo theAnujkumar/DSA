@@ -26,7 +26,13 @@ int main()
     int **q = &p;
     int second = ++(**q);
     int *r = *q;
+    
+    cout << *r << " " << *q << " " << *p << " " << **q << endl;
     ++(*r);
+    cout << *r << " " << *q << " " << *p << " " << **q << endl;
+
+    // *p = &first;
+    //  and *r = *q  and **q = &p  here q point to p so r,p value change
 
     cout << first << " " << second << endl;
     

@@ -10,7 +10,9 @@ int main() {
 
     char *ch = new char;
 
+    // here *arr = 8 bytes and int[5] = 5*4 = 20   , so total 28
     // //int *arr = new int[5];
+
 
     // int n;
     // cout << "enter the range" << endl;

@@ -1,0 +1,30 @@
+int i = 5;
+
+    // create reference variable
+    // same memory different name
+    int &j = i;
+
+
+
+// static memory allocation --> stack memory
+    // dynamic memory allocation --> heap memory    ex-> new char;   return address
+
+    //char * p = new char;
+
+    // int *i = new int;
+    // delete i;
+
+    //int* arr = new int[5];
+    //delete []arr;
+
+
+
+
+// creating 2D array
+    int **arr = new int*[row];
+
+    // mutiple rows lana
+    for(int i=0 ; i<row ; i++)
+    {
+        arr[i] = new int[col];
+    }
