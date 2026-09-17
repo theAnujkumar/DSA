@@ -26,40 +26,41 @@ string encode(string &message)
     }
     return ans;
 }
-// string encode(string &message)
-// {
-//     int i=0;
-//     int ansIndex = 0;
-//     int n = message.length();
-//     cout << n;
+string encode2(string &message)
+{
+    int i=0;
+    int ansIndex = 0;
+    int n = message.length();
+    cout << n;
 
-//     //for(int i=0 ; i<n ; i++)
-//     while(i<n)
-//     {
-//         int j=i+1;
-//         while(j<n && message[i] == message[j])
-//         {
-//             j++;
-//         }
-//         message[ansIndex] = message[i];
-//         ansIndex++;
+    //for(int i=0 ; i<n ; i++)
+    while(i<n)
+    {
+        int j=i+1;
+        while(j<n && message[i] == message[j])
+        {
+            j++;
+        }
+        message[ansIndex] = message[i];
+        ansIndex++;
 
-//         int count = j-i;
+        int count = j-i;
         
-//             string cnt = to_string(count);
-//             for(char ch : cnt)
-//             {
-//                 message[ansIndex++] = ch;
-//             }
-//         i=j;
-//     }
-//     message.resize(ansIndex);
-//     return message;
-// }
+            string cnt = to_string(count);
+            for(char ch : cnt)
+            {
+                message[ansIndex++] = ch;
+            }
+        i=j;
+    }
+    message.resize(ansIndex);
+    return message;
+}
 
 int main() {
     string s = "aaaabbbccdaa";
     string ans = encode(s);
+    //string ans = encode2(s);
     cout << "output is " << ans << endl;
 
     // "a4b3c2d1a2". output

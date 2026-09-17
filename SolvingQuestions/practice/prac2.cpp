@@ -146,6 +146,36 @@ Node* removeDuplicates(Node* &head){
     }
 }
 
+Node *getMiddle(Node* &head)
+{
+    if(head==NULL || head->next == NULL)
+    {
+        return head;
+    }
+    if(head->next->next == NULL)
+    {
+        return head->next;
+    }
+
+    Node* slow = head;
+    Node* fast = head;
+
+    while(fast!=NULL && fast->next!=NULL)
+    {
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+    return slow;
+}
+
+Node *findMiddle(Node *head) {
+    // Write your code here
+
+    Node* ans = getMiddle(head);
+    return ans;
+}
+
+
 int main()
 {
     Node* head = createLinkedList();
@@ -157,4 +187,9 @@ int main()
     //     insertAtTail(head,tail,data);
     //     cin >> data;
     // }
+
+    Node* ans = findMiddle(head);
+    cout << "ans is " << ans->data << endl;
+    //print(ans);
+
 }

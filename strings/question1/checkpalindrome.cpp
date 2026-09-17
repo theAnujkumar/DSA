@@ -11,5 +11,6 @@ bool isPalindrome(string s) {
 
 int main() {
     string str = "madam";
+    //string str = "Nurses Run";
     cout << (isPalindrome(str) ? "true" : "false");
 }

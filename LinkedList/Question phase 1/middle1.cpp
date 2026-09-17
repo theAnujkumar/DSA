@@ -59,6 +59,16 @@ Node* getMiddle(Node *head)
         slow = slow->next;
     }
 
+    // while(fast && slow)
+    // {
+    //     slow = slow->next;
+    //     fast = fast->next;
+    //     if(fast)
+    //     {
+    //         fast = fast->next;
+    //     }
+    // }
+
     // Node* slow = head;
     // Node* fast = head;
 
