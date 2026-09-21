@@ -86,7 +86,7 @@ class Solution {
 
         Node* middle = getMid(head);
         Node* temp = middle->next;
-        middle->next = reverse(head);
+        middle->next = reverse(temp);
 
         Node* head1 = head;
         Node* head2 = middle->next;

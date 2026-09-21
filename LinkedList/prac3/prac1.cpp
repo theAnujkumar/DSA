@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 #include<map>
+#include<unordered_map>
 
 class Node
 {
@@ -245,6 +246,86 @@ Node *findMiddle(Node *head) {
     // Write your code here
 
     getMiddle(head);
+}
+
+
+
+Node *removeDup(Node* head)
+{
+    if(head == NULL)
+    {
+        return NULL;
+    }
+
+    Node* curr = head;
+    while(curr)
+    {
+        Node* temp = curr;
+        while(temp && temp->next)
+        {
+            if(temp->data == temp->next->data)
+            {
+                temp->next = temp->next->next;
+            }
+            temp = temp->next;
+        }
+        curr = curr->next;
+    }
+    return head;
+}
+
+
+Node* removeDupFromUnsorted(Node* head)
+{
+    Node* curr = head;
+    while(curr != NULL)
+    {
+        Node* prev = curr;
+        Node* temp = curr->next;
+        while (temp)
+        {
+            if(curr->data == temp->data)
+            {
+                prev->next = temp->next;
+                temp->next = NULL;
+            }
+            else{
+                prev = temp;
+                temp = temp->next;
+            }
+        }
+        curr = curr->next;
+    }
+    return head;
+}
+
+Node *removeDuplicates(Node *head)
+{
+    if(head == NULL)
+    {
+        return NULL;
+    }
+
+    Node* prev = NULL;
+    Node* curr = head;
+    Node* forward = curr->next;
+
+    unordered_map<int,bool> visited;
+    while(curr)
+    {
+        if(!visited[curr->data])
+        {
+            visited[curr->data] = true;
+            prev = curr;
+            curr = forward;
+        }
+        else{
+            prev->next = curr->next;
+            delete curr;
+        }
+    }
+    
+    return head;
 }
 
 int main()
