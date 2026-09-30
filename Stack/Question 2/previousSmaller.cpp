@@ -52,11 +52,12 @@ int main()
     int n = arr.size();
     vector<int> ans = prevSmallerElement(arr,n);
     
-    // for(auto i : ans)
-    // {
-    //     cout << i << " ";
-    // }
+    for(auto i : ans)
+    {
+        cout << i << " ";
+    }
 
+    cout << endl;
     vector<int> ans2 = prevLargestElement(arr,n);
     for(auto i : ans2)
     {

@@ -73,7 +73,7 @@ int main()
 
     cout << endl ;
 
-    //pattern3(n);
+    pattern3(n);
 
     return 0;
 }

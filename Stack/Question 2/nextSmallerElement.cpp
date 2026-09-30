@@ -53,13 +53,13 @@ int main()
 {
     vector<int> arr = {2,1,4,3};
     int n = arr.size();
-    //vector<int> ans = nextSmallerElement(arr,n);
+    vector<int> ans = nextSmallerElement(arr,n);
     
-    // for(auto i : ans)
-    // {
-    //     cout << i << " ";
-    // }
-
+    for(auto i : ans)
+    {
+        cout << i << " ";
+    }
+    cout << endl;
     vector<int> ans2 = nextLargestElement(arr,n);
     for(auto i : ans2)
     {

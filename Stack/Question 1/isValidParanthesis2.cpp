@@ -27,6 +27,7 @@ bool isValidParenthesis(string s)
         }
 
         else{   // ch = ')'  use ch for read
+            // it means at first time i get closed bracket so not valid
             if(st.empty())
                 return false;
             
@@ -35,6 +36,7 @@ bool isValidParenthesis(string s)
                 {
                     st.pop();
                 }
+                // close bracket left
                 else{
                     return false;
                 }
@@ -42,7 +44,7 @@ bool isValidParenthesis(string s)
     }
     if(st.empty())  
         return true;
-    return false;       // koi invalid char bacha hai like ( , {
+    return false;       // koi invalid char bacha hai like ( , { , )
 
 }
 

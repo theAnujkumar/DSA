@@ -82,5 +82,63 @@ class Solution {
         return candidate;
     }
 };
+
+vector<int> nextSmallerElement(vector<int> &arr, int n)
+{
+    stack<int> st;
+    st.push(-1);
+    vector<int> ans(n);
+
+    for(int i=n-1 ; i>=0 ; i--)
+    {
+        int curr = arr[i];
+        // i want small so pop
+        while(st.top() >= curr)
+        {
+            st.pop();
+        }
+        ans[i] = st.top();
+        st.push(curr);
+    }
+    return ans;
+}
+
+vector<int> nextLargestElement(vector<int> &arr, int n)
+{
+    stack<int> st;
+    st.push(-1);
+    vector<int> ans(n);
+
+    for(int i=n-1 ; i>=0 ; i--)
+    {
+        int curr = arr[i];
+        // i want small so pop
+        while(!st.empty() && st.top() <= curr)
+        {
+            st.pop();
+        }
+        ans[i] = st.empty() ? -1 : st.top();
+        st.push(curr);
+    }
+    return ans;
+}
+
+int main()
+{
+    vector<int> arr = {2,1,4,3};
+    int n = arr.size();
+    vector<int> ans = nextSmallerElement(arr,n);
+    
+    for(auto i : ans)
+    {
+        cout << i << " ";
+    }
+    cout << endl;
+    vector<int> ans2 = nextLargestElement(arr,n);
+    for(auto i : ans2)
+    {
+        cout << i << " ";
+    }
+}
 // tc = O(N)
 

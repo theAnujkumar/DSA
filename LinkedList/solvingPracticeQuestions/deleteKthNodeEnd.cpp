@@ -56,6 +56,7 @@ Node* removeKthNode(Node* head, int K)
     }
 
     // delete mid or last node
+    // here use 0 based indexing so use cnt = 0
     else{
         Node* curr = head;
         Node* prev = NULL;
