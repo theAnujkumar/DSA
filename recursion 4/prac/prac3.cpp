@@ -51,6 +51,64 @@ vector<vector<int>> subsets(vector<int> &nums)
         return ans;
     }
 
+void solveLetter(string digits , vector<string> ans,string output ,int index , string mapping[10])
+{
+    if(index >= digits.size())
+    {
+        ans.push_back(output);
+        return ;
+    }
+
+    int val = digits[index] - '0';   // convert string/char to int
+    string number = mapping[val];       // get all char of number
+
+    for(int i=0 ; i<number.size() ; i++)
+    {
+        output.push_back(number[i]);
+        solveLetter(digits,ans,output,index+1,mapping);
+
+        output.pop_back();
+    }
+}
+
+vector <string> letterCombinations(string digits)
+{
+    vector<string> ans;
+    string output = " ";
+    int index = 0;
+
+    if(digits.size() == 0)
+    {
+        return ans;
+    }
+
+    string mapping[10] = {"", "" , "abc" , "def" , "ghi","jkl","mno","pqrs","tuv","wxyz"};
+    solveLetter(digits,ans,output,index,mapping);
+    return ans;
+}
+
+// k = child , n = parent
+string kthChildNthGeneration(int n, long long int k)
+{
+    if(n==1)
+    {
+        return "M";
+    }
+
+    string parent = kthChildNthGeneration(n-1,(k+1)/2);
+
+    // child odd
+    if(k&1)
+    {
+        return parent;
+    }
+    if(parent == "M")
+        return "F";
+    else{
+        return "M";
+    }
+
+}
 
 int main()
 {

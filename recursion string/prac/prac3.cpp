@@ -71,5 +71,5 @@ int main()
         cout << "no" << endl;
     }
     int ans = total(arr,n);
-    cout << "ans is " << ans << endl;
+    cout << "ans is " << ans << endl;   
 }
