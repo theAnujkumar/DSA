@@ -1,0 +1,73 @@
+#include<iostream>
+using namespace std;
+
+class Animal{
+
+    public:
+        int age;
+        int weight;
+
+    public:
+        void speak()
+        {
+            cout << "animal speak" << endl;
+        }
+        void bark()
+        {
+            cout << "animal bark/speak" << endl;
+        }
+};
+
+class Dog: public Animal{
+    public:
+        string name[20];
+    
+        void bark()
+        {
+            cout << "dog bark" << endl;
+        }
+};
+
+class bulldog: public Dog{
+    public :
+        void bark()
+        {
+            cout << "bulldog bark" << endl;
+        }
+};
+
+int main()
+{
+    Dog d1 ;
+    // here inherit property of their parent beacuse it have not speak function
+    d1.speak();
+    d1.bark();
+
+    bulldog b1;
+    b1.speak();
+    b1.bark();
+
+    d1.age = 6;
+    cout << "animal age is " << d1.age << endl;
+    
+    // focous on here
+    Dog *b2 = new bulldog;
+    b2->bark();
+
+    Animal *a2 = new bulldog;
+    a2->bark();
+
+    return 0;
+}
+
+// a->b->c->d
+
+// focous on here
+    Dog *b2 = new bulldog;
+    b2->bark();
+
+    Animal *a2 = new bulldog;
+    a2->bark();
+    
+            ****        both are different in normal case or in overriding
+            abstraction and interface

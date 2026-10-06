@@ -6,7 +6,7 @@ class Animal
     public:
         virtual void speak()
         {
-            cout << "speaking" << endl;
+            cout << "animal speaking" << endl;
         }
 };
 

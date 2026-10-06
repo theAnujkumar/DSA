@@ -82,6 +82,7 @@ string infixToPostfix(string s)
 int main()
 {
     string expression = "(a-b/c)*(a/k-l)";
+    cout << "expression is " << expression << endl;
     string ans = infixToPostfix(expression);
     cout << "ans is " << ans << endl;
 }

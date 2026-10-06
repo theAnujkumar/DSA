@@ -15,6 +15,15 @@ void printSeries1(int n) {
     cout << endl;
 }
 
+void printSeries2(int n) {
+    int term = 1;
+    for (int i = 1; i <= n; i++) {
+        cout << term << (i == n ? "" : ", ");
+        term += i;
+    }
+    cout << endl;
+}
+
 int main() {
     int N = 7;
     // [cite: 1]
