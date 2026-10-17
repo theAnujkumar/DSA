@@ -28,5 +28,9 @@ int main() {
     int N = 7;
     // [cite: 1]
     printSeries1(N);
+
+    cout << endl;
+
+    printSeries2(N);
     return 0;
 }
