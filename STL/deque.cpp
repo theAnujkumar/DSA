@@ -34,6 +34,16 @@ int main()
 
     cout << "\nafter erase " << d.size();
 
+    cout << endl;
+    for(int i:d)
+    {
+        cout << i << " ";
+    }
+    //d.erase(d.begin()+1,d.end());
+    d.erase(d.begin() , d.begin()+1);
+    cout << "\nafter 2 erase " << d.size();
+    cout << endl;
+    
     for(int i:d)
     {
         cout << i << " ";

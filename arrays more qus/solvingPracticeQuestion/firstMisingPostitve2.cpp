@@ -27,6 +27,15 @@ int firstMissing(int arr[], int n)
 // tc = O(n2)
 // sc = O(1)
 
+
+int findMissingNumber(int N, const vector<int>& arr) {
+    long long expectedSum = (long long)N * (N + 1) / 2;
+    long long actualSum = 0;
+    for (int num : arr) 
+        actualSum += num;
+    return expectedSum - actualSum;
+}
+
 int main()
 {
     int arr[4] = {3,4,-1,1};

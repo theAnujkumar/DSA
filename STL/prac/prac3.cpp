@@ -1,47 +1,51 @@
 #include<iostream>
-#include<set>
+#include<deque>
 using namespace std;
 
 int main()
 {
-    set<int> s;
+    deque<int> d;
 
-    s.insert(5);
-    s.insert(8);
-    s.insert(8);
-    s.insert(1);
-    s.insert(4);
-    s.insert(4);
-    s.insert(4);
+    d.push_back(1);
+    d.push_front(2);
+    d.push_back(3);
+    d.push_back(4);
 
-    for(auto i : s)
+    for(int i:d)
+    {
+        cout << i << " ";
+    }
+
+    //d.pop_back();
+    cout << endl;
+    for(int i:d)
     {
         cout << i << " ";
     }
 
     cout << endl;
+    cout << "element at zero index is " << d.at(0);
 
-    set<int> :: iterator it = s.begin();
-    it++;
+    cout << "\nfront" << d.front();
+    cout << "\nback" << d.back();
 
-    s.erase(s.begin());
+    cout << "\nempty or not " << d.empty();
+    cout << "\nbefore erase " << d.size();
 
-    for(auto i : s)
+    d.erase(d.begin() , d.begin()+1);
+
+    cout << "\nafter erase " << d.size();
+    cout << endl;
+    for(int i:d)
     {
         cout << i << " ";
     }
-
+    //d.erase(d.begin()+1,d.end());
+    d.erase(d.begin() , d.begin()+1);
+    cout << "\nafter 2 erase " << d.size();
     cout << endl;
-
-    cout << "-5 present or not " << s.count(-5);
-
-    set<int> :: iterator itr = s.find(5);
-    cout << endl;
-
-    for(auto it=itr ; it!=s.end() ; it++)
+    for(int i:d)
     {
-        cout<< *it <<" ";
+        cout << i << " ";
     }
-
 }
-
