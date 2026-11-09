@@ -16,6 +16,7 @@ int main() {
 
     int size = sizeof(a);
     cout << "\n the size of integer is " << size ;
+    // cout << "\n the size of integer is " << a.size() ;
 
     // typecasting  -> int to char
 

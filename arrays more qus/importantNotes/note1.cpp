@@ -97,3 +97,15 @@ int maxSum = arr[0];
     //     cout << "no pair found " << endl;
     // }
 */
+
+// for(auto it : arr)
+//     {
+//         //if(seen.find(it) == seen.end())
+//         // in set there is no such element so insert into set 
+//         if(!seen.count(it))
+//         {
+//             result.push_back(it);
+//             seen.insert(it);
+//         }
+//         // else it repeat so do nothing
+//     }
