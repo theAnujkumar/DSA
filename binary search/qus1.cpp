@@ -47,4 +47,4 @@ main()
 }
 
 // sc = O(n)
-// tc = O(n)
+// tc of binary search = O(Logn)

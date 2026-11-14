@@ -91,3 +91,39 @@ cout << "number are \n";
     }
     // col wise sum
 */
+
+/*
+                wave print
+                int start = num + n - 1;
+
+void waveByUser(int n)
+{
+    // n = row , col
+    int num = 1;
+    for(int i=0 ; i<n ; i++)
+    {
+        // for even case increasing order
+        if(i%2 == 0)
+        {
+            for(int j=0 ; j<n ; j++)
+            {
+                cout << num << " ";
+                num++;
+            }
+        }
+        // for odd case decreasing order
+        else{
+            int start = num + n - 1;
+            for(int j=0 ; j<n ; j++)
+            {
+                cout << start << " ";
+                start--;
+            }
+            // so that in even case increasing order maintain
+            num += n;
+        }
+        cout << endl;
+    }
+}
+
+*/

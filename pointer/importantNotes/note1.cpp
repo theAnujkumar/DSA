@@ -58,6 +58,24 @@ cout << "address of first memory " << arr << endl;
 */
 
 /*
+    char cha[4] = "abc";
+    char *cha1 = &cha[0];
+
+    cout << "cha is " << cha << endl;
+
+    cout << "cha address is " << &cha << endl;
+    //cout << "cha1 address is " << &cha1 << endl;
+    cout << "cha is " << cha1 << endl;
+
+    char t1 = 'g';
+    char *p1 = &t1;
+    cout << "p1 address is " << &p1 << endl;
+    cout << "t1 address is " << &t1 << endl;     // it does not give address 
+    cout << "p1 is " << p1 << endl;               // it does not give address 
+    cout << "p1 is " << *p1 << endl;
+*/
+
+/*
 int first = 110;
     int *p = &first;
     int **q = &p;
